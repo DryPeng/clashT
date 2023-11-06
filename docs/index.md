@@ -21,16 +21,16 @@ While this wiki covers both, however, the use of Clash could be challenging for 
 
 ## Feature Overview
 
-- Inbound: HTTP, HTTPS, SOCKS5 server, TUN device[^1]
-- Outbound: Shadowsocks(R), VMess, Trojan, Snell, SOCKS5, HTTP(S), Wireguard[^1]
-- Rule-based Routing: dynamic scripting, domain, IP addresses, process name and more[^1]
-- Fake-IP DNS: minimises impact on DNS pollution and improves network performance
-- Transparent Proxy: Redirect TCP and TProxy TCP/UDP with automatic route table/rule management[^1]
-- Proxy Groups: automatic fallback, load balancing or latency testing
-- Remote Providers: load remote proxy lists dynamically
-- RESTful API: update configuration in-place via a comprehensive API
+- Inbound: HTTP, HTTPS, SOCKS5 server, TUN device<sup>*1</sup>.
+- Outbound: Shadowsocks(R), VMess, Trojan, Snell, SOCKS5, HTTP(S), Wireguard<sup>*1</sup>.
+- Rule-based Routing: dynamic scripting, domain, IP addresses, process name and more<sup>*1</sup>.
+- Fake-IP DNS: minimises impact on DNS pollution and improves network performance.
+- Transparent Proxy: Redirect TCP and TProxy TCP/UDP with automatic route table/rule management<sup>*1</sup>.
+- Proxy Groups: automatic fallback, load balancing or latency testing.
+- Remote Providers: load remote proxy lists dynamically.
+- RESTful API: update configuration in-place via a comprehensive API.
 
-[^1]: Only available in the Premium edition (Awaiting maintenance).
+<small>*1: Only available in the Premium edition (Awaiting maintenance).</small>
 
 
 ## License
