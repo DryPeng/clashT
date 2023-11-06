@@ -5,7 +5,7 @@ import locales from './locales'
 export default defineConfig({
   title: 'ClashT',
 
-  base: '/clasht/',
+  base: '/',
 
   head: [
     [
