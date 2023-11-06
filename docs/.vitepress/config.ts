@@ -3,9 +3,9 @@ import locales from './locales'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'Clash',
+  title: 'ClashT',
 
-  base: '/clash/',
+  base: '/clasht/',
 
   head: [
     [
