@@ -5,7 +5,7 @@ sidebarOrder: 3
 
 # Inbound
 
-Clash supports multiple inbound protocols, including:
+ClashT supports multiple inbound protocols, including:
 
 - SOCKS5
 - HTTP(S)
@@ -14,7 +14,7 @@ Clash supports multiple inbound protocols, including:
 - TProxy UDP
 - Linux TUN device (Premium only)
 
-Connections to any inbound protocol listed above will be handled by the same internal rule-matching engine. That is to say, Clash does not (currently) support different rule sets for different inbounds.
+Connections to any inbound protocol listed above will be handled by the same internal rule-matching engine. That is to say, ClashT does not (currently) support different rule sets for different inbounds.
 
 ## Configuration
 
@@ -64,6 +64,6 @@ $ curl -x socks5h://127.0.0.1:7890 -v http://connect.rom.miui.com/generate_204
 
 ## Redirect and TProxy
 
-Redirect and TProxy are two different ways of implementing transparent proxying. They are both supported by Clash.
+Redirect and TProxy are two different ways of implementing transparent proxying. They are both supported by ClashT.
 
-However, you most likely don't need to mess with these two inbounds - we recommend using [Clash Premium](/premium/introduction) if you want to use transparent proxying, as it has built-in support of the automatic management of the route table, rules and nftables.
+However, you most likely don't need to mess with these two inbounds - we recommend using [ClashT Premium](/premium/introduction) if you want to use transparent proxying, as it has built-in support of the automatic management of the route table, rules and nftables.
