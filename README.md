@@ -16,9 +16,9 @@
   <a href="https://github.com/DryPeng/clashT/releases">
     <img src="https://img.shields.io/github/release/DryPeng/clashT/all.svg?style=flat-square">
   </a>
-  <a href="https://github.com/DryPeng/clashT/releases/tag/premium">
+  <!-- <a href="https://github.com/DryPeng/clashT/releases/tag/premium">
     <img src="https://img.shields.io/badge/release-Premium-00b4f0?style=flat-square">
-  </a>
+  </a> -->
 </p>
 
 > [!NOTE]  
