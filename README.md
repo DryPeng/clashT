@@ -22,12 +22,12 @@
 </p>
 
 > [!NOTE]  
-> This is not the [original *Clash*](https://github.com/Dreamacro/clash). This repositories is currently being maintained. For convenience, ClashT is a new repositories. 
+> This is not the [original *Clash*](https://github.com/Dreamacro/clash). This repositories is currently being maintained. For convenience, *ClashT* is a new repositories. 
 
 
 ## Features
 
-This is a general overview of the features that comes with Clash.  
+This is a general overview of the features that comes with *Clash*.  
 
 - Inbound: HTTP, HTTPS, SOCKS5 server, TUN device.
 - Outbound: Shadowsocks(R), VMess, Trojan, Snell, SOCKS5, HTTP(S), Wireguard.
