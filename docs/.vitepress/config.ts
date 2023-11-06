@@ -10,7 +10,7 @@ export default defineConfig({
   head: [
     [
       'link',
-      { rel: 'icon', type: "image/x-icon", href: '/clash/logo.png' }
+      { rel: 'icon', type: "image/x-icon", href: '/clash/logo.ico' }
     ],
   ],
 
