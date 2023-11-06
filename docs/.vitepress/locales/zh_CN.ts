@@ -27,11 +27,11 @@ export default defineConfig({
     sidebar: chapters,
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Dreamacro/clash' },
+      { icon: 'github', link: 'https://github.com/DryPeng/clashT' },
     ],
 
     editLink: {
-      pattern: 'https://github.com/Dreamacro/clash/edit/master/docs/:path',
+      pattern: 'https://github.com/DryPeng/clashT/edit/master/docs/:path',
       text: '在 GitHub 中编辑此页面'
     },
 
@@ -52,8 +52,8 @@ function nav() {
     {
       text: '下载',
       items: [
-        { text: 'GitHub 开源版', link: 'https://github.com/Dreamacro/clash/releases/' },
-        { text: 'Premium 版本', link: 'https://github.com/Dreamacro/clash/releases/tag/premium' },
+        { text: 'GitHub 开源版', link: 'https://github.com/DryPeng/clashT/releases/' },
+        /* { text: 'Premium 版本', link: 'https://github.com/DryPeng/clashT/releases/tag/premium' }, */
       ]
     }
   ]
