@@ -44,7 +44,7 @@ This is a general overview of the features that comes with *Clash*.
 > [!Note]
 > We are adjusting the documentation page.
 
-You can find the latest documentation at https://dreamacro.github.io/clash/.
+You can find the latest documentation at https://clashT.drypeng.io/.
 
 ## Credits
 
