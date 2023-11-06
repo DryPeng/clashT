@@ -27,11 +27,11 @@ export default defineConfig({
     sidebar: chapters,
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Dreamacro/clash' },
+      { icon: 'github', link: 'https://github.com/DryPeng/clashT' },
     ],
 
     editLink: {
-      pattern: 'https://github.com/Dreamacro/clash/edit/master/docs/:path',
+      pattern: 'https://github.com/DryPeng/clashT/edit/master/docs/:path',
       text: 'Edit this page on GitHub'
     },
 
@@ -50,8 +50,8 @@ function nav() {
     {
       text: 'Download',
       items: [
-        { text: 'Open-source Edition', link: 'https://github.com/Dreamacro/clash/releases/' },
-        { text: 'Premium Edition', link: 'https://github.com/Dreamacro/clash/releases/tag/premium' },
+        { text: 'Open-source Edition', link: 'https://github.com/DryPeng/clashT/releases/' },
+        { text: 'Premium Edition', link: 'https://github.com/DryPeng/clashT/releases/tag/premium' },
       ]
     }
   ]
