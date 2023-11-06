@@ -22,7 +22,7 @@
 </p>
 
 > [!NOTE]  
-> This is not the original Clash. This repositories is currently being maintained.
+> This is not the [original *Clash*](https://github.com/Dreamacro/clash). This repositories is currently being maintained. For convenience, ClashT is a new repositories.
 
 
 ## Features
@@ -38,9 +38,9 @@ This is a general overview of the features that comes with Clash.
 - Remote Providers: load remote proxy lists dynamically
 - RESTful API: update configuration in-place via a comprehensive API
 
-*Some of the features may only be available in the [Premium core](https://dreamacro.github.io/clash/premium/introduction.html).*
+*Some of the features may only be available in the [Premium core](https://github.com/DryPeng/clashT/blob/master/docs/premium/introduction.md)*.
 
-## Documentation
+## Documentation (404)
 
 You can find the latest documentation at [https://dreamacro.github.io/clash/](https://dreamacro.github.io/clash/).
 
