@@ -22,7 +22,7 @@
 </p>
 
 > [!NOTE]  
-> This is not the [original *Clash*](https://github.com/Dreamacro/clash). This repositories is currently being maintained. For convenience, *ClashT* is a new repositories. 
+> This is not the [original *Clash*](https://github.com/Dreamacro/clash). This repositories is currently trying maintained. For convenience, *ClashT* is a new repositories. 
 
 
 ## Features
