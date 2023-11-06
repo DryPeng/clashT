@@ -1,6 +1,6 @@
 <h1 align="center">
   <img src="https://github.com/DryPeng/clashT/raw/master/docs/logo.png" alt="Clash" width="200">
-  <br>Clash<br>
+  <br>ClashT<br>
 </h1>
 
 <h4 align="center">A rule-based tunnel in Go.</h4>
@@ -20,6 +20,10 @@
     <img src="https://img.shields.io/badge/release-Premium-00b4f0?style=flat-square">
   </a>
 </p>
+
+> [!NOTE]  
+> This is not the original Clash. This repositories is currently being maintained.
+
 
 ## Features
 
