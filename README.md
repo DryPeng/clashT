@@ -40,7 +40,7 @@ This is a general overview of the features that comes with *Clash*.
 
 *Some of the features may only be available in the [Premium core](https://github.com/DryPeng/clashT/blob/master/docs/premium/introduction.md)*.
 
-## Documentation (404)
+## Documentation (Edit)
 > [!Note]
 > We are adjusting the documentation page.
 
