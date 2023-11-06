@@ -51,7 +51,7 @@ function nav() {
       text: 'Download',
       items: [
         { text: 'Open-source Edition', link: 'https://github.com/DryPeng/clashT/releases/' },
-        { text: 'Premium Edition', link: 'https://github.com/DryPeng/clashT/releases/tag/premium' },
+        /* { text: 'Premium Edition', link: 'https://github.com/DryPeng/clashT/releases/tag/premium' }, */
       ]
     }
   ]
