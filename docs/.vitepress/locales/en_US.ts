@@ -10,6 +10,7 @@ const chapters = generateSidebarChapter('en_US', new Map([
   ['premium', 'Premium'],
   ['runtime', 'Runtime'],
   ['advanced-usages', 'Advanced Usages'],
+  ['terms', 'Terms']
 ]))
 
 export default defineConfig({
