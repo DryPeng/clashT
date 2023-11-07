@@ -9,15 +9,15 @@ ClashT 是一个跨平台的基于规则的代理工具, 在网络和应用层�
 
 目前, ClashT 包含一个版本:
 
-- ~~[ClashT](https://github.com/Dreamacro/clash): 发布于[github.com/Dreamacro/clash](https://github.com/Dreamacro/clash)的开源版本~~
-- ~~[ClashT Premium 版本](https://github.com/Dreamacro/clash/releases/tag/premium): 具有[TUN 和更多支持](/zh_CN/premium/introduction) 的专有内核 (免费)~~
-- [ClashTT](https://github.com/DryPeng/clashT): 发布于[github.com/DryPeng/clashT](https://github.com/DryPeng/clashT)的开源版本
+- ~~[Clash](https://github.com/Dreamacro/clash): 发布于[github.com/Dreamacro/clash](https://github.com/Dreamacro/clash)的开源版本~~
+- ~~[Clash Premium 版本](https://github.com/Dreamacro/clash/releases/tag/premium): 具有[TUN 和更多支持](/zh_CN/premium/introduction) 的专有内核 (免费)~~
+- [ClashT](https://github.com/DryPeng/clashT): 发布于[github.com/DryPeng/clashT](https://github.com/DryPeng/clashT)的开源版本
 
 虽然这个 Wiki 涵盖了上述版本的内容, 然而对于普通用户来说, ClashTT 的使用可能仍是一种挑战. 而对于考虑使用 GUI 客户端的用户, 我们确实有一些建议:
 
-- ~~[ClashT for Windows](https://github.com/Fndroid/clash_for_windows_pkg/releases) (Windows 和 macOS)~~
-- ~~[ClashT for Android](https://github.com/Kr328/ClashTTForAndroid)~~
-- ~~[ClashTX](https://github.com/yichengchen/clashX) 或 [ClashTX Pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) (macOS)~~
+- ~~[Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg/releases) (Windows 和 macOS)~~
+- ~~[Clash for Android](https://github.com/Kr328/ClashTTForAndroid)~~
+- ~~[ClashX](https://github.com/yichengchen/clashX) 或 [ClashX Pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) (macOS)~~
 
 ## 特点概述
 
