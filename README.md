@@ -21,11 +21,14 @@
   </a> -->
 </p>
 
-> [!NOTE]  
+> [!WARNING]  
 > This is not the [original *Clash*](https://github.com/Dreamacro/clash). This repositories is currently trying maintained. For convenience, *ClashT* is a new repositories.
 
 > [!NOTE]  
-> Do you want to contribute? Just [PR](https://github.com/DryPeng/clashT/pulls)
+> Do you want to contribute? Just [open a PR](https://github.com/DryPeng/clashT/pulls).
+
+> [!IMPORTANT]  
+> We are collecting [original *Clash*](https://github.com/Dreamacro/clash) issues and suggestions, [click here to submit](https://github.com/DryPeng/clashT/issues).
 
 
 ## Features
