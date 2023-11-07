@@ -9,15 +9,16 @@ body:
       value: |
         ### Thank you for taking the time to report an issue with the ClashT core.  
         
-        Prior to submitting this issue, please read and follow the guidelines below to ensure that your issue can be resolved as quickly as possible. Options marked with an asterisk (*) are required, while others are optional. If the information you provide does not comply with the requirements, the maintainers may not respond and may directly close the issue.  
+        Prior to submitting this issue, please read and follow the guidelines below to ensure that your issue can be resolved as quickly as possible. Options marked with an asterisk (*) are required, while others are optional. If the information you provide does not comply with the requirements, we may not respond or close the issue 
+        directly.  
         
-        ^If you can debug and fix the issue yourself, we welcome you to submit a pull request to merge your changes upstream.^
+        <small>If you can debug and fix the issue yourself, we welcome you to submit a pull request to merge your changes upstream.<>
 
         ### Prerequisites
-        1. I understand that this is the official open-source version of the Clash core, only providing support for the open-source version or Premium version
-        2. I am submitting an issue with the Clash core, not Clash.Meta / OpenClash / ClashX / Clash For Windows or any other derivative version
-        3. I have searched at the [Issue Tracker](……/) and have not found any related issues
-        4. I have read the [official Wiki](https://clasht.drypeng.io/) and was unable to solve the issue
+        1. I understand that this is the official open-source version of the ClashT core, only providing support for the Open-source version or Premium version.
+        2. I am submitting an issue with the ClashT core, not Clash.Meta / OpenClash / ClashX / Clash For Windows or any other derivative version.
+        3. I have searched and have not found any similar issues.
+        4. I have read the [official Wiki](https://clasht.drypeng.io/) or discussed with people in [Discussions](https://github.com/DryPeng/clashT/discussions) confirmed this is a bug.
 
   - type: markdown
     attributes:
@@ -27,7 +28,6 @@ body:
       value: |
         Please provide the following information to help us locate the issue.  
         The issue might be closed if there's not enough information provided.
-
 
   - type: dropdown
     id: version
