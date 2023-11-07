@@ -42,7 +42,7 @@ socks-port: 7891
 # direct: directly forward the packets to the Internet
 mode: rule
 
-# ClashTT by default prints logs to STDOUT
+# ClashT by default prints logs to STDOUT
 # info / warning / error / debug / silent
 # log-level: info
 
