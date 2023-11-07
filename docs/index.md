@@ -1,23 +1,23 @@
 <!-- This is the index page, linked by the dummy sidebar item at Introduction/_dummy-index.md -->
-# What is ClashTTT?
+# What is ClashT?
 
-Welcome to the official knowledge base of the alt-ClashTT core project ("ClashTTT").
+Welcome to the official knowledge base of the alt-ClashTT core project ("ClashT").
 
-ClashTTT is a cross-platform rule-based proxy utility that runs on the network and application layer, supporting various proxy and anti-censorship protocols out-of-the-box.
+ClashT is a cross-platform rule-based proxy utility that runs on the network and application layer, supporting various proxy and anti-censorship protocols out-of-the-box.
 
-It has been adopted widely by the Internet users in some countries and regions where the Internet is heavily censored or blocked. Either way, ClashTTT can be used by anyone who wants to improve their Internet experience.
+It has been adopted widely by the Internet users in some countries and regions where the Internet is heavily censored or blocked. Either way, ClashT can be used by anyone who wants to improve their Internet experience.
 
 There are currently one editions of ClashTT:
 
-- ~~[ClashTT](https://github.com/Dreamacro/clash): the open-source version released at [github.com/Dreamacro/clash](https://github.com/Dreamacro/clash)~~
-- ~~[ClashTT Premium](https://github.com/Dreamacro/clash/releases/tag/premium): proprietary core with [TUN support and more](/premium/introduction) (free of charge)~~
-- [ClashTTT](https://github.com/DryPeng/clashT): the open-source version released at [github.com/DryPeng/clashT](https://github.com/DryPeng/clashT)
+- ~~[Clash](https://github.com/Dreamacro/clash): the open-source version released at [github.com/Dreamacro/clash](https://github.com/Dreamacro/clash)~~
+- ~~[Clash Premium](https://github.com/Dreamacro/clash/releases/tag/premium): proprietary core with [TUN support and more](/premium/introduction) (free of charge)~~
+- [ClashT](https://github.com/DryPeng/clashT): the open-source version released at [github.com/DryPeng/clashT](https://github.com/DryPeng/clashT)
 
 While this wiki covers both, however, the use of ClashTT could be challenging for the average users. Those might want to consider using a GUI client instead, and we do have some recommendations:
 
-- ~~[ClashTT for Windows](https://github.com/Fndroid/clash_for_windows_pkg/releases) (Windows and macOS)~~
-- ~~[ClashTT for Android](https://github.com/Kr328/ClashTTForAndroid)~~
-- ~~[ClashTTX](https://github.com/yichengchen/clashX) or [ClashTTX Pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) (macOS)~~
+- ~~[Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg/releases) (Windows and macOS)~~
+- ~~[Clash for Android](https://github.com/Kr328/ClashTTForAndroid)~~
+- ~~[ClashX](https://github.com/yichengchen/clashX) or [ClashX Pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) (macOS)~~
 
 ## Feature Overview
 
