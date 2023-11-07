@@ -5,7 +5,7 @@ sidebarOrder: 3
 
 # Integrating ClashT in Golang Programs
 
-If clash does not fit your own usage, you can use ClashTTT in your own Golang code.
+If clash does not fit your own usage, you can use ClashT in your own Golang code.
 
 There is already basic support:
 

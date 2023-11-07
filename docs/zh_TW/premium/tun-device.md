@@ -7,13 +7,13 @@ sidebarOrder: 2
 
 Premium 内核支持 TUN 设备. 作为网络层设备, 它可以用来处理 TCP、UDP、ICMP 流量. 它已经在生产环境中进行了广泛的测试和使用 - 您甚至可以用它来玩竞技游戏.
 
-使用 ClashTT TUN 的最大优势之一是内置支持对操作系统路由表、路由规则和 nftable 的自动管理. 您可以通过选项 `tun.auto-route` 和 `tun.auto-redir` 来启用它. 这个功能替换了古老的配置选项 `redir-port`(TCP), 以方便配置和提高稳定性.
+使用 ClashT TUN 的最大优势之一是内置支持对操作系统路由表、路由规则和 nftable 的自动管理. 您可以通过选项 `tun.auto-route` 和 `tun.auto-redir` 来启用它. 这个功能替换了古老的配置选项 `redir-port`(TCP), 以方便配置和提高稳定性.
 
 ::: tip
 `tun.auto-route` 仅在 macOS、Windows、Linux 和 Android 上可用, 并且仅接收 IPv4 流量。`tun.auto-redir` 仅在 Linux 上可用（需要内核 netlink 支持）。
 :::
 
-ClashTT 有两种可供选择的 TCP/IP 协议栈: `system` or `gvisor`. 为了获得最好的性能, 我们建议您优先使用 `system` 栈, 只有遇到兼容性问题时才使用 `gvisor`. 并且如果你遇到这样的情况, 请立即[提交 Issue](https://github.com/Dreamacro/clash/issues/new/choose).
+ClashT 有两种可供选择的 TCP/IP 协议栈: `system` or `gvisor`. 为了获得最好的性能, 我们建议您优先使用 `system` 栈, 只有遇到兼容性问题时才使用 `gvisor`. 并且如果你遇到这样的情况, 请立即[提交 Issue](https://github.com/Dreamacro/clash/issues/new/choose).
 
 ## 技术限制
 
@@ -41,17 +41,17 @@ tun:
   auto-detect-interface: true # 与 `interface-name` 冲突
 ```
 
-请注意, 由于使用了 TUN 设备和对系统路由表、nftable 的操作, ClashTT 在此处将需要超级用户权限来运行.
+请注意, 由于使用了 TUN 设备和对系统路由表、nftable 的操作, ClashT 在此处将需要超级用户权限来运行.
 
 ```shell
 sudo ./clash
 ```
 
-如果您的设备已经有一些 TUN 设备, ClashTT TUN 可能无法工作 - 您必须手动检查路由表和路由规则. 在这种情况下, `fake-ip-filter` 也许也有帮助.
+如果您的设备已经有一些 TUN 设备, ClashT TUN 可能无法工作 - 您必须手动检查路由表和路由规则. 在这种情况下, `fake-ip-filter` 也许也有帮助.
 
 ## Windows
 
-您需要访问 [WinTUN 网站](https://www.wintun.net) 并下载最新版本. 之后, 将 `wintun.dll` 复制到 ClashTT 主目录. 示例配置:
+您需要访问 [WinTUN 网站](https://www.wintun.net) 并下载最新版本. 之后, 将 `wintun.dll` 复制到 ClashT 主目录. 示例配置:
 
 ```yaml
 tun:

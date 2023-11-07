@@ -5,7 +5,7 @@ sidebarOrder: 5
 
 # Rules 规则
 
-在[快速入手](/zh_CN/configuration/getting-started)中, 我们介绍了ClashTT中基于规则的匹配的基本知识. 在本章中, 我们将介绍最新版本的 ClashTT 中所有可用的规则类型.
+在[快速入手](/zh_CN/configuration/getting-started)中, 我们介绍了ClashT中基于规则的匹配的基本知识. 在本章中, 我们将介绍最新版本的 ClashT 中所有可用的规则类型.
 
 ```txt
 # 类型,参数,策略(,no-resolve)
@@ -47,10 +47,10 @@ TYPE,ARGUMENT,POLICY(,no-resolve)
 
 ### GEOIP IP地理位置 (国家代码)
 
-GEOIP 规则用于根据数据包的目标 IP 地址的**国家代码**路由数据包. ClashTT 使用 [MaxMind GeoLite2](https://dev.maxmind.com/geoip/geoip2/geolite2/) 数据库来实现这一功能.
+GEOIP 规则用于根据数据包的目标 IP 地址的**国家代码**路由数据包. ClashT 使用 [MaxMind GeoLite2](https://dev.maxmind.com/geoip/geoip2/geolite2/) 数据库来实现这一功能.
 
 ::: warning
-使用这种规则时, ClashTT 将域名解析为 IP 地址, 然后查找 IP 地址的国家代码.
+使用这种规则时, ClashT 将域名解析为 IP 地址, 然后查找 IP 地址的国家代码.
 如果要跳过 DNS 解析, 请使用 `no-resolve` 选项.
 :::
 
@@ -61,7 +61,7 @@ GEOIP 规则用于根据数据包的目标 IP 地址的**国家代码**路由数
 IP-CIDR 规则用于根据数据包的**目标 IPv4 地址**路由数据包.
 
 ::: warning
-使用这种规则时, ClashTT 将域名解析为 IPv4 地址.
+使用这种规则时, ClashT 将域名解析为 IPv4 地址.
 如果要跳过 DNS 解析, 请使用 `no-resolve` 选项.
 :::
 
@@ -72,7 +72,7 @@ IP-CIDR 规则用于根据数据包的**目标 IPv4 地址**路由数据包.
 IP-CIDR6 规则用于根据数据包的**目标 IPv6 地址**路由数据包.
 
 ::: warning
-使用这种规则时, ClashTT 将域名解析为 IPv6 地址.
+使用这种规则时, ClashT 将域名解析为 IPv6 地址.
 如果要跳过 DNS 解析, 请使用 `no-resolve` 选项.
 :::
 
@@ -125,7 +125,7 @@ IPSET 规则用于根据 IP 集匹配并路由数据包. 根据 [IPSET 的官方
 因此, 此功能仅在 Linux 上工作, 并且需要安装 `ipset`.
 
 ::: warning
-使用此规则时, ClashTT 将解析域名以获取 IP 地址, 然后查找 IP 地址是否在 IP 集中.
+使用此规则时, ClashT 将解析域名以获取 IP 地址, 然后查找 IP 地址是否在 IP 集中.
 如果要跳过 DNS 解析, 请使用 `no-resolve` 选项.
 :::
 
@@ -137,10 +137,10 @@ IPSET 规则用于根据 IP 集匹配并路由数据包. 根据 [IPSET 的官方
 此功能仅在 [Premium 版本](/zh_CN/premium/introduction) 中可用.
 :::
 
-RULE-SET 规则用于根据 [Rule Providers 规则集](/zh_CN/premium/rule-providers) 的结果路由数据包. 当 ClashTT 使用此规则时, 它会从指定的 Rule Providers 规则集中加载规则, 然后将数据包与规则进行匹配. 如果数据包与任何规则匹配, 则将数据包路由到指定的策略, 否则跳过此规则.
+RULE-SET 规则用于根据 [Rule Providers 规则集](/zh_CN/premium/rule-providers) 的结果路由数据包. 当 ClashT 使用此规则时, 它会从指定的 Rule Providers 规则集中加载规则, 然后将数据包与规则进行匹配. 如果数据包与任何规则匹配, 则将数据包路由到指定的策略, 否则跳过此规则.
 
 ::: warning
-使用 RULE-SET 时, 当规则集的类型为 IPCIDR , ClashTT 将解析域名以获取 IP 地址.
+使用 RULE-SET 时, 当规则集的类型为 IPCIDR , ClashT 将解析域名以获取 IP 地址.
 如果要跳过 DNS 解析, 请使用 `no-resolve` 选项.
 :::
 
@@ -152,10 +152,10 @@ RULE-SET 规则用于根据 [Rule Providers 规则集](/zh_CN/premium/rule-provi
 此功能仅在 [Premium 版本](/zh_CN/premium/introduction) 中可用.
 :::
 
-SCRIPT 规则用于根据脚本的结果路由数据包. 当 ClashTT 使用此规则时, 它会执行指定的脚本, 然后将数据包路由到脚本的输出.
+SCRIPT 规则用于根据脚本的结果路由数据包. 当 ClashT 使用此规则时, 它会执行指定的脚本, 然后将数据包路由到脚本的输出.
 
 ::: warning
-使用 SCRIPT 时, ClashTT 将解析域名以获取 IP 地址.
+使用 SCRIPT 时, ClashT 将解析域名以获取 IP 地址.
 如果要跳过 DNS 解析, 请使用 `no-resolve` 选项.
 :::
 

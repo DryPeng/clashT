@@ -15,7 +15,7 @@ sidebarOrder: 2
 - FortiGate SSL VPN
 - Array Networks SSL VPN
 
-例如, 您的公司使用 Cisco AnyConnect 作为内部网络访问的方式. 这里我将向您展示如何使用 ClashTT 提供的策略路由来使用 OpenConnect.
+例如, 您的公司使用 Cisco AnyConnect 作为内部网络访问的方式. 这里我将向您展示如何使用 ClashT 提供的策略路由来使用 OpenConnect.
 
 首先, [安装 vpn-slice](https://github.com/dlenski/vpn-slice#requirements). 这个工具会覆写 OpenConnect 的默认路由表行为. 简单来说, 它会阻止 VPN 覆写您的默认路由.
 

@@ -33,7 +33,7 @@ sidebarOrder: 4
 
 ## 我的系统应该使用哪个版本？
 
-这里是一些人们在 ClashTT 上使用的常见系统, 以及每个系统的推荐版本:
+这里是一些人们在 ClashT 上使用的常见系统, 以及每个系统的推荐版本:
 
 - NETGEAR WNDR3700v2: mips-hardfloat [#846](https://github.com/Dreamacro/clash/issues/846)
 - NETGEAR WNDR3800: mips-softfloat [#579](https://github.com/Dreamacro/clash/issues/579)
@@ -45,7 +45,7 @@ sidebarOrder: 4
 
 ## 不会修复的问题
 
-官方 ClashTT 内核项目不会实现/修复以下内容:
+官方 ClashT 内核项目不会实现/修复以下内容:
 
 - [Snell](https://github.com/Dreamacro/clash/issues/2466)
 - [Custom CA](https://github.com/Dreamacro/clash/issues/2333)
@@ -54,7 +54,7 @@ sidebarOrder: 4
 - [KCP](https://github.com/Dreamacro/clash/issues/16)
 - [mKCP](https://github.com/Dreamacro/clash/issues/2308)
 - [TLS Encrypted Client Hello](https://github.com/Dreamacro/clash/issues/2295)
-- [TCP support for ClashTT DNS server](https://github.com/Dreamacro/clash/issues/368)
+- [TCP support for ClashT DNS server](https://github.com/Dreamacro/clash/issues/368)
 - [MITM](https://github.com/Dreamacro/clash/issues/227#issuecomment-508693628)
 
 当官方Go QUIC库发布时, 以下内容将被考虑实施:
@@ -70,7 +70,7 @@ sidebarOrder: 4
 
 请参考这个讨论: [#422](https://github.com/Dreamacro/clash/issues/422)
 
-## ClashTT Premium 无法访问互联网
+## ClashT Premium 无法访问互联网
 
 您可以参考这些相关讨论:
 
@@ -85,11 +85,11 @@ sidebarOrder: 4
 FATA[0000] Parse config error: Rules[0] [RULE-SET,apple,REJECT] error: unsupported rule type RULE-SET
 ```
 
-您正在使用 ClashTT 开源版. 规则 Providers 目前仅在 [免费 Premium 内核](https://github.com/Dreamacro/clash/releases/tag/premium) 中可用.
+您正在使用 ClashT 开源版. 规则 Providers 目前仅在 [免费 Premium 内核](https://github.com/Dreamacro/clash/releases/tag/premium) 中可用.
 
 ## DNS 劫持不起作用
 
 由于 `tun.auto-route` 不会拦截局域网流量, 如果您的系统 DNS 设置为私有子网中的服务器, 则 DNS 劫持将不起作用. 您可以:
 
 1. 使用非私有 DNS 服务器作为系统 DNS, 如 `1.1.1.1`
-2. 或者手动将系统 DNS 设置为 ClashTT DNS (默认为 `198.18.0.1`)
+2. 或者手动将系统 DNS 设置为 ClashT DNS (默认为 `198.18.0.1`)

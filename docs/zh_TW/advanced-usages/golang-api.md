@@ -1,11 +1,11 @@
 ---
-sidebarTitle: 在 Golang 程序中集成 ClashTT
+sidebarTitle: 在 Golang 程序中集成 ClashT
 sidebarOrder: 3
 ---
 
-# 在 Golang 程序中集成 ClashTT
+# 在 Golang 程序中集成 ClashT
 
-如果 ClashTT 不能满足您的需求, 您可以在自己的 Golang 代码中使用 ClashTT.
+如果 ClashT 不能满足您的需求, 您可以在自己的 Golang 代码中使用 ClashT.
 
 目前已经有基本的支持:
 

@@ -115,7 +115,7 @@ dns:
 
   # Supports UDP, TCP, DoT, DoH. You can specify the port to connect to.
   # All DNS questions are sent directly to the nameserver, without proxies
-  # involved. ClashTT answers the DNS question with the first result gathered.
+  # involved. ClashT answers the DNS question with the first result gathered.
   nameserver:
     - 114.114.114.114 # default value
     - 8.8.8.8 # default value

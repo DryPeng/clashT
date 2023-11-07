@@ -5,13 +5,13 @@ sidebarOrder: 1
 
 # 介绍
 
-在本章中, 我们将介绍 ClashTT 的常见功能以及如何使用和配置它们.
+在本章中, 我们将介绍 ClashT 的常见功能以及如何使用和配置它们.
 
-ClashTT 使用 [YAML](https://yaml.org) (YAML Ain't Markup Language) 作为配置文件格式. YAML 旨在易于阅读、编写和解析, 通常用于配置文件.
+ClashT 使用 [YAML](https://yaml.org) (YAML Ain't Markup Language) 作为配置文件格式. YAML 旨在易于阅读、编写和解析, 通常用于配置文件.
 
-## 了解 ClashTT 的工作原理
+## 了解 ClashT 的工作原理
 
-在继续之前, 有必要了解 ClashTT 的工作原理, 其中有两个关键部分:
+在继续之前, 有必要了解 ClashT 的工作原理, 其中有两个关键部分:
 
 ![](/assets/connection-flow.png)
 
@@ -19,7 +19,7 @@ ClashTT 使用 [YAML](https://yaml.org) (YAML Ain't Markup Language) 作为配�
 
 ### Inbound 入站
 
-Inbound 入站是在本地端监听的部分, 它通过打开一个本地端口并监听传入的连接来工作. 当连接进来时, ClashTT 会查询配置文件中配置的规则, 并决定连接应该去哪个 Outbound 出站.
+Inbound 入站是在本地端监听的部分, 它通过打开一个本地端口并监听传入的连接来工作. 当连接进来时, ClashT 会查询配置文件中配置的规则, 并决定连接应该去哪个 Outbound 出站.
 
 ### Outbound 出站
 
@@ -27,7 +27,7 @@ Outbound 出站是连接到远程端的部分. 根据配置的不同, 它可以�
 
 ## 基于规则的路由
 
-ClashTT 支持基于规则的路由, 这意味着您可以根据各种规则将数据包路由到不同的出站. 规则可以在配置文件的 `rules` 部分中定义.
+ClashT 支持基于规则的路由, 这意味着您可以根据各种规则将数据包路由到不同的出站. 规则可以在配置文件的 `rules` 部分中定义.
 
 有许多可用的规则类型, 每种规则类型都有自己的语法. 规则的一般语法是:
 
