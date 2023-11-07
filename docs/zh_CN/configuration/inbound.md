@@ -5,7 +5,7 @@ sidebarOrder: 3
 
 # Inbound 入站
 
-Clash 支持多种入站协议, 包括:
+ClashT 支持多种入站协议, 包括:
 
 - SOCKS5
 - HTTP(S)
@@ -14,7 +14,7 @@ Clash 支持多种入站协议, 包括:
 - TProxy UDP
 - Linux TUN 设备 (仅 Premium 版本)
 
-任何入站协议的连接都将由同一个内部规则匹配引擎处理. 也就是说, Clash **目前**不支持为不同的入站协议设置不同的规则集.
+任何入站协议的连接都将由同一个内部规则匹配引擎处理. 也就是说, ClashT **目前**不支持为不同的入站协议设置不同的规则集.
 
 ## 配置
 
@@ -64,6 +64,6 @@ $ curl -x socks5h://127.0.0.1:7890 -v http://connect.rom.miui.com/generate_204
 
 ## Redirect 和 TProxy
 
-Redirect 和 TProxy 是两种实现透明代理的不同方式, 均被 Clash 所支持.
+Redirect 和 TProxy 是两种实现透明代理的不同方式, 均被 ClashT 所支持.
 
-然而, 您不一定需要手动设置这两个功能 - 我们建议您使用 [Clash Premium 版本](/zh_CN/premium/introduction) 来配置透明代理, 因为它内置了对操作系统路由表、规则和 nftables 的自动管理.
+然而, 您不一定需要手动设置这两个功能 - 我们建议您使用 [ClashT Premium 版本](/zh_CN/premium/introduction) 来配置透明代理, 因为它内置了对操作系统路由表、规则和 nftables 的自动管理.

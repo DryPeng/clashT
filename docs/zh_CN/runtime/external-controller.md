@@ -7,7 +7,7 @@ sidebarOrder: 1
 
 ## 简介
 
-外部控制允许用户通过 HTTP RESTful API 来控制 Clash. 第三方 Clash GUI 就是基于这个功能的. 通过在 `external-controller` 中指定地址来启用这个功能.
+外部控制允许用户通过 HTTP RESTful API 来控制 ClashT. 第三方 ClashT GUI 就是基于这个功能的. 通过在 `external-controller` 中指定地址来启用这个功能.
 
 ## 认证
 
@@ -35,7 +35,7 @@ sidebarOrder: 1
 - `/version`
   - 方法: `GET`
     - 完整路径: `GET /version`
-    - 描述: 获取 Clash 版本
+    - 描述: 获取 ClashT 版本
 
 ### 配置
 

@@ -1,15 +1,15 @@
 ---
-sidebarTitle: ClashT as a Service
+sidebarTitle: ClashTT as a Service
 sidebarOrder: 3
 ---
 
-# ClashT as a Service
+# ClashTT as a Service
 
-While ClashT is meant to be run in the background, there's currently no elegant way to implement daemons with Golang, hence we recommend you to daemonize ClashT with third-party tools.
+While ClashTT is meant to be run in the background, there's currently no elegant way to implement daemons with Golang, hence we recommend you to daemonize ClashTT with third-party tools.
 
 ## systemd
 
-Copy ClashT binary to `/usr/local/bin` and configuration files to `/etc/clash`:
+Copy ClashTT binary to `/usr/local/bin` and configuration files to `/etc/clash`:
 
 ```shell
 cp clash /usr/local/bin
@@ -21,7 +21,7 @@ Create the systemd configuration file at `/etc/systemd/system/clash.service`:
 
 ```ini
 [Unit]
-Description=ClashT daemon, A rule-based proxy in Go.
+Description=ClashTT daemon, A rule-based proxy in Go.
 After=network-online.target
 
 [Service]
@@ -51,7 +51,7 @@ Launch clashd immediately with:
 systemctl start clash
 ```
 
-Check the health and logs of ClashT with:
+Check the health and logs of ClashTT with:
 
 ```shell
 systemctl status clash
@@ -62,7 +62,7 @@ Credits to [ktechmidas](https://github.com/ktechmidas) for this guide. ([#754](h
 
 ## Docker
 
-We provide pre-built images of ClashT and ClashT Premium. Therefore you can deploy ClashT with [Docker Compose](https://docs.docker.com/compose/) if you're on Linux. However, you should be advised that it's [not recommended](https://github.com/Dreamacro/clash/issues/2249#issuecomment-1203494599) to run **ClashT Premium** in a container.
+We provide pre-built images of ClashTT and ClashTT Premium. Therefore you can deploy ClashTT with [Docker Compose](https://docs.docker.com/compose/) if you're on Linux. However, you should be advised that it's [not recommended](https://github.com/Dreamacro/clash/issues/2249#issuecomment-1203494599) to run **ClashTT Premium** in a container.
 
 ::: warning
 This setup will not work on macOS systems due to the lack of [host networking and TUN support](https://github.com/Dreamacro/clash/issues/770#issuecomment-650951876) in Docker for Mac.
@@ -71,7 +71,7 @@ This setup will not work on macOS systems due to the lack of [host networking an
 
 ::: code-group
 
-```yaml [ClashT]
+```yaml [ClashTT]
 services:
   clash:
     image: ghcr.io/dreamacro/clash
@@ -86,7 +86,7 @@ services:
     network_mode: "bridge"
 ```
 
-```yaml [ClashT Premium]
+```yaml [ClashTT Premium]
 services:
   clash:
     image: ghcr.io/dreamacro/clash-premium
@@ -113,7 +113,7 @@ Save as `docker-compose.yaml` and place your `config.yaml` in the same directory
 Before proceeding, refer to your platform documentations about time synchronisation - things will break if time is not in sync.
 :::
 
-When you're ready, run the following commands to bring up ClashT:
+When you're ready, run the following commands to bring up ClashTT:
 
 ```shell
 docker-compose up -d
@@ -125,7 +125,7 @@ You can view the logs with:
 docker-compose logs
 ```
 
-Stop ClashT with:
+Stop ClashTT with:
 
 ```shell
 docker-compose stop
@@ -195,7 +195,7 @@ Launch clashd immediately with:
 service clash onestart
 ```
 
-Check the status of ClashT with:
+Check the status of ClashTT with:
 
 ```shell
 service clash status

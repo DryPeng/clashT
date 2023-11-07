@@ -5,15 +5,15 @@ sidebarOrder: 2
 
 # 快速开始
 
-为了开始使用 Clash, 您可以从源码编译或者下载预编译的二进制文件.
+为了开始使用 ClashT, 您可以从源码编译或者下载预编译的二进制文件.
 
 ## 使用预编译的二进制文件
 
-您可以在这里下载 Clash 的内核二进制文件: [https://github.com/Dreamacro/clash/releases](https://github.com/Dreamacro/clash/releases)
+您可以在这里下载 ClashT 的内核二进制文件: [https://github.com/Dreamacro/clash/releases](https://github.com/Dreamacro/clash/releases)
 
 ## 从源码编译
 
-您可以使用 Golang 1.19+ 在您的设备上编译 Clash:
+您可以使用 Golang 1.19+ 在您的设备上编译 ClashT:
 
 ```shell
 $ go install github.com/Dreamacro/clash@latest
@@ -24,12 +24,12 @@ go: downloading github.com/Dreamacro/clash v1.15.1
 
 ```shell
 $ $GOPATH/bin/clash -v
-Clash unknown version darwin arm64 with go1.20.3 unknown time
+ClashT unknown version darwin arm64 with go1.20.3 unknown time
 ```
 
 ## 跨平台/操作系统编译
 
-Golang 支持交叉编译, 所以您可以为不同架构或操作系统的设备编译 Clash. 您可以使用 _make_ 来轻松地编译它们, 例如:
+Golang 支持交叉编译, 所以您可以为不同架构或操作系统的设备编译 ClashT. 您可以使用 _make_ 来轻松地编译它们, 例如:
 
 ```shell
 $ git clone --depth 1 https://github.com/Dreamacro/clash

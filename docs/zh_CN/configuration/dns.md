@@ -1,11 +1,11 @@
 ---
-sidebarTitle: Clash DNS
+sidebarTitle: ClashT DNS
 sidebarOrder: 6
 ---
 
-# Clash DNS
+# ClashT DNS
 
-由于 Clash 的某些部分运行在第 3 层 (网络层) , 因此其数据包的域名是无法获取的, 也就无法进行基于规则的路由.
+由于 ClashT 的某些部分运行在第 3 层 (网络层) , 因此其数据包的域名是无法获取的, 也就无法进行基于规则的路由.
 
 *Enter fake-ip*: 它支持基于规则的路由, 最大程度地减少了 DNS 污染攻击的影响, 并且提高了网络性能, 有时甚至是显著的.
 
@@ -17,32 +17,32 @@ sidebarOrder: 6
 
 fake-ip 池的默认 CIDR 是 `198.18.0.1/16` (一个保留的 IPv4 地址空间, 可以在 `dns.fake-ip-range` 中进行更改).
 
-当 DNS 请求被发送到 Clash DNS 时, Clash 内核会通过管理内部的域名和其 fake-ip 地址的映射, 从池中分配一个 *空闲* 的 fake-ip 地址.
+当 DNS 请求被发送到 ClashT DNS 时, ClashT 内核会通过管理内部的域名和其 fake-ip 地址的映射, 从池中分配一个 *空闲* 的 fake-ip 地址.
 
 以使用浏览器访问 `http://google.com` 为例.
 
-1. 浏览器向 Clash DNS 请求 `google.com` 的 IP 地址
-2. Clash 检查内部映射并返回 `198.18.1.5`
+1. 浏览器向 ClashT DNS 请求 `google.com` 的 IP 地址
+2. ClashT 检查内部映射并返回 `198.18.1.5`
 3. 浏览器向 `198.18.1.5` 的 `80/tcp` 端口发送 HTTP 请求
-4. 当收到 `198.18.1.5` 的入站数据包时, Clash 查询内部映射, 发现客户端实际上是在向 `google.com` 发送数据包
+4. 当收到 `198.18.1.5` 的入站数据包时, ClashT 查询内部映射, 发现客户端实际上是在向 `google.com` 发送数据包
 5. 根据规则的不同:
 
-    1. Clash 可能仅将域名发送到 SOCKS5 或 shadowsocks 等出站代理, 并与代理服务器建立连接
+    1. ClashT 可能仅将域名发送到 SOCKS5 或 shadowsocks 等出站代理, 并与代理服务器建立连接
 
-    2. 或者 Clash 可能会基于 `SCRIPT`、`GEOIP`、`IP-CIDR` 规则或者使用 DIRECT 直连出口查询 `google.com` 的真实 IP 地址
+    2. 或者 ClashT 可能会基于 `SCRIPT`、`GEOIP`、`IP-CIDR` 规则或者使用 DIRECT 直连出口查询 `google.com` 的真实 IP 地址
 
 由于这是一个令人困惑的概念, 我将以使用 cURL 程序访问 `http://google.com` 为例:
 
 ```txt{2,3,5,6,8,9}
 $ curl -v http://google.com
-<---- cURL 向您的系统 DNS (Clash) 询问 google.com 的 IP 地址
-----> Clash 决定使用 198.18.1.70 作为 google.com 的 IP 地址, 并记住它
+<---- cURL 向您的系统 DNS (ClashT) 询问 google.com 的 IP 地址
+----> ClashT 决定使用 198.18.1.70 作为 google.com 的 IP 地址, 并记住它
 *   Trying 198.18.1.70:80...
 <---- cURL 连接到 198.18.1.70 tcp/80
-----> Clash 将立即接受连接, 并且..
+----> ClashT 将立即接受连接, 并且..
 * Connected to google.com (198.18.1.70) port 80 (#0)
-----> Clash 在其内存中查找到 198.18.1.70 对应于 google.com
-----> Clash 查询对应的规则, 并通过匹配的出口发送数据包
+----> ClashT 在其内存中查找到 198.18.1.70 对应于 google.com
+----> ClashT 查询对应的规则, 并通过匹配的出口发送数据包
 > GET / HTTP/1.1
 > Host: google.com
 > User-Agent: curl/8.0.1

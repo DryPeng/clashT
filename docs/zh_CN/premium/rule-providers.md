@@ -5,14 +5,14 @@ sidebarOrder: 4
 
 # Rule Providers 规则集
 
-Rule Providers 规则集和 [Proxy Providers 代理集](/zh_CN/configuration/outbound#proxy-providers-代理集) 基本相同. 它允许用户从外部源加载规则, 从而使配置更加简洁. 该功能目前仅适用于 Clash Premium 内核.
+Rule Providers 规则集和 [Proxy Providers 代理集](/zh_CN/configuration/outbound#proxy-providers-代理集) 基本相同. 它允许用户从外部源加载规则, 从而使配置更加简洁. 该功能目前仅适用于 ClashT Premium 内核.
 
 要定义 Rule Providers 规则集, 请将 `rule-providers` 规则集字段添加到主配置中:
 
 ```yaml
 rule-providers:
   apple:
-    behavior: "domain" # domain, ipcidr or classical (仅限 Clash Premium 内核)
+    behavior: "domain" # domain, ipcidr or classical (仅限 ClashT Premium 内核)
     type: http
     url: "url"
     # format: 'yaml' # or 'text'

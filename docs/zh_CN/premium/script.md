@@ -5,7 +5,7 @@ sidebarOrder: 5
 
 # Script 脚本
 
-Clash Premium 实现了基于 Python3 的脚本功能, 使用户能够以动态灵活的方式为数据包选择策略.
+ClashT Premium 实现了基于 Python3 的脚本功能, 使用户能够以动态灵活的方式为数据包选择策略.
 
 您可以使用单个 Python 脚本控制整个规则匹配引擎, 也可以定义一些快捷方式, 并与常规规则一起使用. 本页介绍了第一种功能, 有关后者, 请参见[Script Shortcuts 脚本捷径](./script-shortcuts.md).
 

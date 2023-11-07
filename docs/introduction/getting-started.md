@@ -5,15 +5,15 @@ sidebarOrder: 2
 
 # Getting Started
 
-To get started with ClashT, you can either build it from source or download pre-built binaries.
+To get started with ClashTT, you can either build it from source or download pre-built binaries.
 
 ## Using pre-built binaries
 
-You can download ClashT core binaries here: [https://github.com/Dreamacro/clash/releases](https://github.com/Dreamacro/clash/releases)
+You can download ClashTT core binaries here: [https://github.com/Dreamacro/clash/releases](https://github.com/Dreamacro/clash/releases)
 
 ## Install from source
 
-You can build ClashT on your own device with Golang 1.19+:
+You can build ClashTT on your own device with Golang 1.19+:
 
 ```shell
 $ go install github.com/Dreamacro/clash@latest
@@ -24,7 +24,7 @@ The binary is built under `$GOPATH/bin`:
 
 ```shell
 $ $GOPATH/bin/clash -v
-ClashT unknown version darwin arm64 with go1.20.3 unknown time
+ClashTT unknown version darwin arm64 with go1.20.3 unknown time
 ```
 
 ## Build for a different arch/os

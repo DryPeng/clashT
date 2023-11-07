@@ -35,13 +35,13 @@ socks-port: 7891
 # "[aaaa::a8aa:ff:fe09:57d8]": 绑定单个 IPv6 地址
 # bind-address: '*'
 
-# Clash 路由工作模式
+# ClashT 路由工作模式
 # rule: 基于规则的数据包路由
 # global: 所有数据包将被转发到单个节点
 # direct: 直接将数据包转发到互联网
 mode: rule
 
-# 默认情况下, Clash 将日志打印到 STDOUT
+# 默认情况下, ClashT 将日志打印到 STDOUT
 # 日志级别: info / warning / error / debug / silent
 # log-level: info
 
@@ -51,7 +51,7 @@ mode: rule
 # RESTful Web API 监听地址
 external-controller: 127.0.0.1:9090
 
-# 配置目录的相对路径或静态 Web 资源目录的绝对路径. Clash core 将在
+# 配置目录的相对路径或静态 Web 资源目录的绝对路径. ClashT core 将在
 # `http://{{external-controller}}/ui` 中提供服务.
 # external-ui: folder
 
@@ -112,7 +112,7 @@ dns:
 
   # 支持 UDP、TCP、DoT、DoH. 您可以指定要连接的端口.
   # 所有 DNS 查询都直接发送到名称服务器, 无需代理
-  # Clash 使用第一个收到的响应作为 DNS 查询的结果.
+  # ClashT 使用第一个收到的响应作为 DNS 查询的结果.
   nameserver:
     - 114.114.114.114 # 默认值
     - 8.8.8.8 # 默认值
