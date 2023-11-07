@@ -36,7 +36,7 @@ socks-port: 7891
 # "[aaaa::a8aa:ff:fe09:57d8]": bind a single IPv6 address
 # bind-address: '*'
 
-# ClashTT router working mode
+# ClashT router working mode
 # rule: rule-based packet routing
 # global: all packets will be forwarded to a single endpoint
 # direct: directly forward the packets to the Internet
