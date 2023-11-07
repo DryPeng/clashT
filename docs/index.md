@@ -35,4 +35,4 @@ While this wiki covers both, however, the use of ClashT could be challenging for
 
 ## License
 
-ClashT is released under the [GPL-3.0](https://github.com/Dreamacro/clash/blob/master/LICENSE) open-source license. Prior to [v0.16.0](https://github.com/Dreamacro/clash/releases/tag/v0.16.0) or commit [e5284c](https://github.com/Dreamacro/clash/commit/e5284cf647717a8087a185d88d15a01096274bc2), it was licensed under the MIT license.
+Clash is released under the [GPL-3.0](https://github.com/Dreamacro/clash/blob/master/LICENSE) open-source license. Prior to [v0.16.0](https://github.com/Dreamacro/clash/releases/tag/v0.16.0) or commit [e5284c](https://github.com/Dreamacro/clash/commit/e5284cf647717a8087a185d88d15a01096274bc2), it was licensed under the MIT license.
