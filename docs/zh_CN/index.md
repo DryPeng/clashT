@@ -1,23 +1,23 @@
 <!-- 这是 index 页面, 由位于 Introduction/_dummy-index.md 的虚拟侧边栏文件链接 -->
-# 什么是 ClashTT?
+# 什么是 ClashT?
 
-欢迎访问 ClashTT 内核项目的官方说明文档.
+欢迎访问 ClashT 内核项目的官方说明文档.
 
-ClashTT 是一个跨平台的基于规则的代理工具, 在网络和应用层运行, 支持各种代理和反审查协议的开箱即用.
+ClashT 是一个跨平台的基于规则的代理工具, 在网络和应用层运行, 支持各种代理和反审查协议的开箱即用.
 
 在一些互联网受到严格审查或封锁的国家和地区, 它已被互联网用户广泛采用. 无论如何, 任何想要改善其 Internet 体验的人都可以使用 ClashTT.
 
-目前, ClashTT 包含一个版本:
+目前, ClashT 包含一个版本:
 
-- ~~[ClashT](https://github.com/Dreamacro/clash): 发布于[github.com/Dreamacro/clash](https://github.com/Dreamacro/clash)的开源版本~~
-- ~~[ClashT Premium 版本](https://github.com/Dreamacro/clash/releases/tag/premium): 具有[TUN 和更多支持](/zh_CN/premium/introduction) 的专有内核 (免费)~~
-- [ClashTT](https://github.com/DryPeng/clashT): 发布于[github.com/DryPeng/clashT](https://github.com/DryPeng/clashT)的开源版本
+- ~~[Clash](https://github.com/Dreamacro/clash): 发布于[github.com/Dreamacro/clash](https://github.com/Dreamacro/clash)的开源版本~~
+- ~~[Clash Premium 版本](https://github.com/Dreamacro/clash/releases/tag/premium): 具有[TUN 和更多支持](/zh_CN/premium/introduction) 的专有内核 (免费)~~
+- [ClashT](https://github.com/DryPeng/clashT): 发布于[github.com/DryPeng/clashT](https://github.com/DryPeng/clashT)的开源版本
 
-虽然这个 Wiki 涵盖了上述版本的内容, 然而对于普通用户来说, ClashTT 的使用可能仍是一种挑战. 而对于考虑使用 GUI 客户端的用户, 我们确实有一些建议:
+虽然这个 Wiki 涵盖了上述版本的内容, 然而对于普通用户来说, ClashT 的使用可能仍是一种挑战. 而对于考虑使用 GUI 客户端的用户, 我们确实有一些建议:
 
-- ~~[ClashT for Windows](https://github.com/Fndroid/clash_for_windows_pkg/releases) (Windows 和 macOS)~~
-- ~~[ClashT for Android](https://github.com/Kr328/ClashTForAndroid)~~
-- ~~[ClashTX](https://github.com/yichengchen/clashX) 或 [ClashTX Pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) (macOS)~~
+- ~~[Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg/releases) (Windows 和 macOS)~~
+- ~~[Clash for Android](https://github.com/Kr328/ClashTForAndroid)~~
+- ~~[ClashX](https://github.com/yichengchen/clashX) 或 [ClashX Pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) (macOS)~~
 
 ## 特点概述
 
