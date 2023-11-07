@@ -5,11 +5,11 @@ sidebarOrder: 2
 
 # Getting Started
 
-It's recommended that you read the [Introduction](/configuration/introduction) before proceeding. After you have a brief understanding of how ClashTTT works, you can start writing your own configuration.
+It's recommended that you read the [Introduction](/configuration/introduction) before proceeding. After you have a brief understanding of how ClashT works, you can start writing your own configuration.
 
 ## Configuration Files
 
-The main configuration file is called `config.yaml`. By default, ClashTTT reads the configuration files at `$HOME/.config/clash`. If it doesn't exist, ClashTTT will generate a minimal configuration file at that location.
+The main configuration file is called `config.yaml`. By default, ClashT reads the configuration files at `$HOME/.config/clash`. If it doesn't exist, ClashT will generate a minimal configuration file at that location.
 
 If you want to place your configurations elsewhere (e.g. `/etc/clash`), you can use command-line option `-d` to specify a configuration directory:
 
@@ -27,7 +27,7 @@ clash -f /etc/clash/config.yaml
 
 ## Special Syntaxes
 
-There are some special syntaxes in ClashTTT configuration files, of which you might want to be aware:
+There are some special syntaxes in ClashT configuration files, of which you might want to be aware:
 
 ### IPv6 Addresses
 
@@ -39,9 +39,9 @@ You should wrap IPv6 addresses in square brackets, for example:
 
 ### DNS Wildcard Domain Matching
 
-In some cases, you will need to match against wildcard domains. For example, when you're setting up [ClashTTT DNS](/configuration/dns), you might want to match against all subdomains of `localdomain`.
+In some cases, you will need to match against wildcard domains. For example, when you're setting up [ClashT DNS](/configuration/dns), you might want to match against all subdomains of `localdomain`.
 
-ClashTTT do offer support on matching different levels of wildcard domains in the DNS configuration, while the syntaxes defined below:
+ClashT do offer support on matching different levels of wildcard domains in the DNS configuration, while the syntaxes defined below:
 
 ::: tip
 Any domain with these characters should be wrapped with single quotes (`'`). For example, `'*.google.com'`.
