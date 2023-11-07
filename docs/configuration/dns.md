@@ -1,11 +1,11 @@
 ---
-sidebarTitle: ClashTTT DNS
+sidebarTitle: ClashT DNS
 sidebarOrder: 6
 ---
 
-# ClashTTT DNS
+# ClashT DNS
 
-Since some parts of ClashTTT run on the Layer 3 (Network Layer), they would've been impossible to obtain domain names of the packets for rule-based routing.
+Since some parts of ClashT run on the Layer 3 (Network Layer), they would've been impossible to obtain domain names of the packets for rule-based routing.
 
 *Enter fake-ip*. It enables rule-based routing, minimises the impact of DNS pollution attack and improves network performance, sometimes drastically.
 
