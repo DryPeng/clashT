@@ -18,9 +18,6 @@ body:
         2. I am submitting an issue with the Clash core, not Clash.Meta / OpenClash / ClashX / Clash For Windows or any other derivative version
         3. I have searched at the [Issue Tracker](……/) and have not found any related issues
         4. I have read the [official Wiki](https://clasht.drypeng.io/) and was unable to solve the issue
-          required: true
-        - label: "(required for Premium core) I've tried the `dev` branch and the issue still exists"
-          required: false
 
   - type: markdown
     attributes:
