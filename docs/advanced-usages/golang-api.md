@@ -1,9 +1,9 @@
 ---
-sidebarTitle: Integrating ClashTTT in Golang Programs
+sidebarTitle: Integrating ClashT in Golang Programs
 sidebarOrder: 3
 ---
 
-# Integrating ClashTTT in Golang Programs
+# Integrating ClashT in Golang Programs
 
 If clash does not fit your own usage, you can use ClashTTT in your own Golang code.
 
