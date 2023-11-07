@@ -24,7 +24,7 @@ PublicKey = ...
 Endpoint = ...
 ```
 
-然后在 ClashT 中您只需要有一个 DIRECT 策略组, 它包含一个指定的出站接口:
+然后在 ClashTT 中您只需要有一个 DIRECT 策略组, 它包含一个指定的出站接口:
 
 ```yaml
 proxy-groups:
@@ -37,4 +37,4 @@ rules:
   - DOMAIN,google.com,Wireguard
 ```
 
-这通常比 ClashT 自己实现的用户空间 Wireguard 客户端性能更好. Wireguard 在内核中支持.
+这通常比 ClashTT 自己实现的用户空间 Wireguard 客户端性能更好. Wireguard 在内核中支持.

@@ -5,7 +5,7 @@ sidebarOrder: 4
 
 # Outbound 出站
 
-ClashT 中有几种类型的出站. 每种类型都有自己的特点和使用场景. 在本页中, 我们将介绍每种类型的通用特点以及如何使用和配置它们.
+ClashTT 中有几种类型的出站. 每种类型都有自己的特点和使用场景. 在本页中, 我们将介绍每种类型的通用特点以及如何使用和配置它们.
 
 [[toc]]
 
@@ -15,7 +15,7 @@ Proxies 代理节点是您可以配置的一些出站目标. 就像代理服务�
 
 ### Shadowsocks
 
-ClashT 支持以下 Shadowsocks 的加密方法:
+ClashTT 支持以下 Shadowsocks 的加密方法:
 
 | 系列 | 加密方法 |
 | ------ | ------- |
@@ -23,7 +23,7 @@ ClashT 支持以下 Shadowsocks 的加密方法:
 | 流式 | aes-128-cfb, aes-192-cfb, aes-256-cfb, rc4-md5, chacha20-ietf, xchacha20 |
 | 块式 | aes-128-ctr, aes-192-ctr, aes-256-ctr |
 
-此外, ClashT 还支持流行的 Shadowsocks 插件 `obfs` 和 `v2ray-plugin`.
+此外, ClashTT 还支持流行的 Shadowsocks 插件 `obfs` 和 `v2ray-plugin`.
 
 ::: code-group
 
@@ -79,7 +79,7 @@ ClashT 支持以下 Shadowsocks 的加密方法:
 
 ### ShadowsocksR
 
-ClashT 也支持声名狼藉的反审查协议 ShadowsocksR.
+ClashTT 也支持声名狼藉的反审查协议 ShadowsocksR.
 
 支持以下 ShadowsocksR 的加密方法:
 
@@ -123,7 +123,7 @@ ClashT 也支持声名狼藉的反审查协议 ShadowsocksR.
 
 ### Vmess
 
-ClashT 支持以下 Vmess 的加密方法:
+ClashTT 支持以下 Vmess 的加密方法:
 
 - auto
 - aes-128-gcm
@@ -218,7 +218,7 @@ ClashT 支持以下 Vmess 的加密方法:
 
 ### Socks5
 
-此外, ClashT 还支持 Socks5 代理.
+此外, ClashTT 还支持 Socks5 代理.
 
 ```yaml
 - name: "socks"
@@ -236,7 +236,7 @@ ClashT 支持以下 Vmess 的加密方法:
 
 ### HTTP
 
-ClashT 也支持 HTTP 代理:
+ClashTT 也支持 HTTP 代理:
 
 ::: code-group
 
@@ -268,7 +268,7 @@ ClashT 也支持 HTTP 代理:
 
 ### Snell
 
-作为可选的反审查协议, ClashT也集成了对Snell的支持.
+作为可选的反审查协议, ClashTT也集成了对Snell的支持.
 
 ```yaml
 # 暂不支持 UDP
@@ -287,7 +287,7 @@ ClashT 也支持 HTTP 代理:
 
 ### Trojan
 
-ClashT 内置了对流行协议 Trojan 的支持:
+ClashTT 内置了对流行协议 Trojan 的支持:
 
 ::: code-group
 
@@ -353,11 +353,11 @@ Proxy Groups 策略组用于根据不同策略分发规则传递过来的请求,
 
 ### url-test 延迟测试
 
-ClashT 会周期性地通过指定的 URL 向列表中的代理服务器发送 HTTP HEAD 请求来测试每个代理服务器的**延迟**. 可以设置最大容忍值、测试间隔和目标 URL.
+ClashTT 会周期性地通过指定的 URL 向列表中的代理服务器发送 HTTP HEAD 请求来测试每个代理服务器的**延迟**. 可以设置最大容忍值、测试间隔和目标 URL.
 
 ### fallback 可用性测试
 
-ClashT 会周期性地通过指定的 URL 向列表中的代理服务器发送 HTTP HEAD 请求来测试每个代理服务器的**可用性**. 第一个可用的服务器将被使用.
+ClashTT 会周期性地通过指定的 URL 向列表中的代理服务器发送 HTTP HEAD 请求来测试每个代理服务器的**可用性**. 第一个可用的服务器将被使用.
 
 ### load-balance 负载均衡
 
@@ -365,7 +365,7 @@ ClashT 会周期性地通过指定的 URL 向列表中的代理服务器发送 H
 
 ### select 手动选择
 
-ClashT 启动时默认使用策略组中的第一个代理服务器. 用户可以使用 RESTful API 选择要使用的代理服务器. 在此模式下, 您可以在配置中硬编码服务器或使用 [Proxy Providers 代理集](#proxy-providers-代理集) 动态添加服务器.
+ClashTT 启动时默认使用策略组中的第一个代理服务器. 用户可以使用 RESTful API 选择要使用的代理服务器. 在此模式下, 您可以在配置中硬编码服务器或使用 [Proxy Providers 代理集](#proxy-providers-代理集) 动态添加服务器.
 
 无论哪种方式, 有时您也可以使用直接连接来路由数据包. 在这种情况下, 您可以使用 `DIRECT` 直连出站.
 
@@ -382,8 +382,8 @@ ClashT 启动时默认使用策略组中的第一个代理服务器. 用户可�
 
 代理集使用户可以动态加载代理服务器列表, 而不是在配置文件中硬编码. 目前有两种代理集可以加载服务器列表:
 
-- `http`: ClashT 会在启动时从指定的 URL 加载服务器列表. 如果设置了 `interval` 选项, ClashT 会定期从远程拉取服务器列表.
-- `file`: ClashT 会在启动时从指定的文件位置加载服务器列表.
+- `http`: ClashTT 会在启动时从指定的 URL 加载服务器列表. 如果设置了 `interval` 选项, ClashTT 会定期从远程拉取服务器列表.
+- `file`: ClashTT 会在启动时从指定的文件位置加载服务器列表.
 
 健康检查对两种模式都可用, 并且与策略组中的 `fallback` 完全相同. 服务器列表文件的配置格式在主配置文件中也完全相同:
 

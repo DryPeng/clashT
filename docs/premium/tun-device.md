@@ -7,7 +7,7 @@ sidebarOrder: 2
 
 The Premium core has out-of-the-box support of TUN device. Being a Network layer device, it can be used to handle TCP, UDP, ICMP traffic. It has been extensively tested and used in production environments - you can even play competitive games with it.
 
-One of the biggest advantage of using ClashT TUN is the built-in support of the *automagic* management of the route table, routing rules and nftable. You can enable it with the options `tun.auto-route` and `tun.auto-redir`. It's a drop-in replacement of the ancient configuration option `redir-port` (TCP) for the sake of easier configuration and better stability.
+One of the biggest advantage of using ClashTT TUN is the built-in support of the *automagic* management of the route table, routing rules and nftable. You can enable it with the options `tun.auto-route` and `tun.auto-redir`. It's a drop-in replacement of the ancient configuration option `redir-port` (TCP) for the sake of easier configuration and better stability.
 
 ::: tip
 `tun.auto-route` is only available on macOS, Windows, Linux and Android, and only receives IPv4 traffic. `tun.auto-redir` is only available on Linux(needs netlink support in the kernel).
@@ -41,17 +41,17 @@ tun:
   auto-detect-interface: true # conflict with `interface-name`
 ```
 
-Be advised, since the use of TUN device and manipulation of system route/nft settings, ClashT will need superuser privileges to run.
+Be advised, since the use of TUN device and manipulation of system route/nft settings, ClashTT will need superuser privileges to run.
 
 ```shell
 sudo ./clash
 ```
 
-If your device already has some TUN device, ClashT TUN might not work - you will have to check the route table and routing rules manually. In this case, `fake-ip-filter` may helpful as well.
+If your device already has some TUN device, ClashTT TUN might not work - you will have to check the route table and routing rules manually. In this case, `fake-ip-filter` may helpful as well.
 
 ## Windows
 
-You will need to visit the [WinTUN website](https://www.wintun.net) and download the latest release. After that, copy `wintun.dll` into ClashT home directory. Example configuration:
+You will need to visit the [WinTUN website](https://www.wintun.net) and download the latest release. After that, copy `wintun.dll` into ClashTT home directory. Example configuration:
 
 ```yaml
 tun:

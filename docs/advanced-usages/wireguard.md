@@ -24,7 +24,7 @@ PublicKey = ...
 Endpoint = ...
 ```
 
-Then in ClashTT you would only need to have a DIRECT proxy group that has a specific outbound interface:
+Then in ClashTTT you would only need to have a DIRECT proxy group that has a specific outbound interface:
 
 ```yaml
 proxy-groups:
@@ -37,4 +37,4 @@ rules:
   - DOMAIN,google.com,Wireguard
 ```
 
-This should perform better than whereas if ClashTT implemented its own userspace Wireguard client. Wireguard is supported in the kernel.
+This should perform better than whereas if ClashTTT implemented its own userspace Wireguard client. Wireguard is supported in the kernel.

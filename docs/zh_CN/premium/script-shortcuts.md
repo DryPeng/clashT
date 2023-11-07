@@ -5,7 +5,7 @@ sidebarOrder: 6
 
 # Script Shortcuts 脚本捷径
 
-ClashT Premium 实现了基于 Python3 的脚本功能, 允许用户以动态灵活的方式为数据包选择策略.
+ClashTT Premium 实现了基于 Python3 的脚本功能, 允许用户以动态灵活的方式为数据包选择策略.
 
 您可以使用单个 Python 脚本控制整个规则匹配引擎, 也可以定义一些 Shortcuts 捷径并将它们与常规规则一起使用. 本页参考后者功能. 有关前者, 请参见 [脚本](./script.md).
 

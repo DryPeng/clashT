@@ -33,7 +33,7 @@ Quoting from [golang/go](https://github.com/golang/go/wiki/MinimumRequirements#a
 
 ## Which release should I use for my system?
 
-Here are some common systems that people use ClashTT on, and the recommended release for each of them:
+Here are some common systems that people use ClashTTT on, and the recommended release for each of them:
 
 - NETGEAR WNDR3700v2: mips-hardfloat [#846](https://github.com/Dreamacro/clash/issues/846)
 - NETGEAR WNDR3800: mips-softfloat [#579](https://github.com/Dreamacro/clash/issues/579)
@@ -45,7 +45,7 @@ If your device is not listed here, you can check the CPU architecture of your de
 
 ## List of wontfix
 
-The official ClashTT core project will not implement/fix these things:
+The official ClashTTT core project will not implement/fix these things:
 
 - [Snell](https://github.com/Dreamacro/clash/issues/2466)
 - [Custom CA](https://github.com/Dreamacro/clash/issues/2333)
@@ -54,7 +54,7 @@ The official ClashTT core project will not implement/fix these things:
 - [KCP](https://github.com/Dreamacro/clash/issues/16)
 - [mKCP](https://github.com/Dreamacro/clash/issues/2308)
 - [TLS Encrypted Client Hello](https://github.com/Dreamacro/clash/issues/2295)
-- [TCP support for ClashTT DNS server](https://github.com/Dreamacro/clash/issues/368)
+- [TCP support for ClashTTT DNS server](https://github.com/Dreamacro/clash/issues/368)
 - [MITM](https://github.com/Dreamacro/clash/issues/227#issuecomment-508693628)
 
 The following will be considered implementing when the official Go QUIC library releases.
@@ -70,7 +70,7 @@ Your system might be out of sync in time. Refer to your platform documentations 
 
 Refer to this discussion: [#422](https://github.com/Dreamacro/clash/issues/422)
 
-## ClashTT Premium unable to access Internet
+## ClashTTT Premium unable to access Internet
 
 You can refer to these relevant discussions:
 
@@ -85,11 +85,11 @@ If you stumbled on this error message:
 FATA[0000] Parse config error: Rules[0] [RULE-SET,apple,REJECT] error: unsupported rule type RULE-SET
 ```
 
-You're using ClashTT open-source edition. Rule Providers is currently only available in the [Premium core](https://github.com/Dreamacro/clash/releases/tag/premium). (it's free)
+You're using ClashTTT open-source edition. Rule Providers is currently only available in the [Premium core](https://github.com/Dreamacro/clash/releases/tag/premium). (it's free)
 
 ## DNS Hijack does not work
 
 Since `tun.auto-route` does not intercept LAN traffic, if your system DNS is set to servers in private subnets, DNS hijack will not work. You can either:
 
 1. Use a non-private DNS server as your system DNS like `1.1.1.1`
-2. Or manually set up your system DNS to the ClashTT DNS (by default, `198.18.0.1`)
+2. Or manually set up your system DNS to the ClashTTT DNS (by default, `198.18.0.1`)

@@ -7,7 +7,7 @@ sidebarOrder: 2
 
 OpenConnect supports Cisco AnyConnect SSL VPN, Juniper Network Connect, Palo Alto Networks (PAN) GlobalProtect SSL VPN, Pulse Connect Secure SSL VPN, F5 BIG-IP SSL VPN, FortiGate SSL VPN and Array Networks SSL VPN.
 
-For example, there would be a use case where your company uses Cisco AnyConnect for internal network access. Here I'll show you how you can use OpenConnect with policy routing powered by ClashT.
+For example, there would be a use case where your company uses Cisco AnyConnect for internal network access. Here I'll show you how you can use OpenConnect with policy routing powered by ClashTT.
 
 First, [install vpn-slice](https://github.com/dlenski/vpn-slice#requirements). This tool overrides default routing table behaviour of OpenConnect. Simply saying, it stops the VPN from overriding your default routes.
 

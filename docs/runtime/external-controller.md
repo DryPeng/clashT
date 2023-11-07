@@ -7,7 +7,7 @@ sidebarOrder: 1
 
 ## Introduction
 
-External Controller enables users to control ClashT programmatically with the HTTP RESTful API. The third-party ClashT GUIs are heavily based on this feature. Enable this feature by specifying an address in `external-controller`.
+External Controller enables users to control ClashTT programmatically with the HTTP RESTful API. The third-party ClashTT GUIs are heavily based on this feature. Enable this feature by specifying an address in `external-controller`.
 
 ## Authentication
 

@@ -1,5 +1,5 @@
 ---
-sidebarTitle: 什么是 ClashT?
+sidebarTitle: 什么是 ClashTT?
 sidebarOrder: 1
 ---
 

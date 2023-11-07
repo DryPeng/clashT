@@ -5,7 +5,7 @@ sidebarOrder: 5
 
 # Rules
 
-In the Getting Started guide, we covered the basics of rule-based matching in ClashTT. In this chapter, we'll cover all available rule types in the latest version of ClashTT.
+In the Getting Started guide, we covered the basics of rule-based matching in ClashTTT. In this chapter, we'll cover all available rule types in the latest version of ClashTTT.
 
 ```txt
 TYPE,ARGUMENT,POLICY(,no-resolve)
@@ -46,10 +46,10 @@ In this case, `www.google.com` or `googleapis.com` are routed to `policy`.
 
 ### GEOIP
 
-GEOIP rules are used to route packets based on the **country code** of the target IP address. ClashTT uses [MaxMind GeoLite2](https://dev.maxmind.com/geoip/geoip2/geolite2/) database for this feature.
+GEOIP rules are used to route packets based on the **country code** of the target IP address. ClashTTT uses [MaxMind GeoLite2](https://dev.maxmind.com/geoip/geoip2/geolite2/) database for this feature.
 
 ::: warning
-When encountering this rule, ClashTT will resolve the domain name to an IP address and then look up the country code of the IP address. If you want to skip the DNS resolution, use `no-resolve` option.
+When encountering this rule, ClashTTT will resolve the domain name to an IP address and then look up the country code of the IP address. If you want to skip the DNS resolution, use `no-resolve` option.
 :::
 
 `GEOIP,CN,policy` routes any packets destined to a China IP address to `policy`.
@@ -59,7 +59,7 @@ When encountering this rule, ClashTT will resolve the domain name to an IP addre
 IP-CIDR rules are used to route packets based on the **destination IPv4 address** of the packet.
 
 ::: warning
-When encountering this rule, ClashTT will resolve the domain name to an IP address. If you want to skip the DNS resolution, use `no-resolve` option.
+When encountering this rule, ClashTTT will resolve the domain name to an IP address. If you want to skip the DNS resolution, use `no-resolve` option.
 :::
 
 `IP-CIDR,127.0.0.0/8,DIRECT` routes any packets destined to `127.0.0.0/8` to the `DIRECT` outbound.
@@ -69,7 +69,7 @@ When encountering this rule, ClashTT will resolve the domain name to an IP addre
 IP-CIDR6 rules are used to route packets based on the **destination IPv6 address** of the packet.
 
 ::: warning
-When encountering this rule, ClashTT will resolve the domain name to an IP address. If you want to skip the DNS resolution, use `no-resolve` option.
+When encountering this rule, ClashTTT will resolve the domain name to an IP address. If you want to skip the DNS resolution, use `no-resolve` option.
 :::
 
 `IP-CIDR6,2620:0:2d0:200::7/32,policy` routes any packets destined to `2620:0:2d0:200::7/32` to `policy`.
@@ -121,7 +121,7 @@ IPSET rules are used to match against an IP set and route packets based on the r
 Therefore, this feature only works on Linux and requires `ipset` to be installed.
 
 ::: warning
-When encountering this rule, ClashTT will resolve the domain name to an IP address. If you want to skip the DNS resolution, use `no-resolve` option.
+When encountering this rule, ClashTTT will resolve the domain name to an IP address. If you want to skip the DNS resolution, use `no-resolve` option.
 :::
 
 `IPSET,chinaip,DIRECT` routes all packets with destination IPs matching the `chinaip` IPSET to DIRECT outbound.
@@ -132,10 +132,10 @@ When encountering this rule, ClashTT will resolve the domain name to an IP addre
 This feature is only available in the [Premium](/premium/introduction) edtion.
 :::
 
-RULE-SET rules are used to route packets based on the result of a [rule provider](/premium/rule-providers). When ClashTT encounters this rule, it loads the rules from the specified rule provider and then matches the packet against the rules. If the packet matches any of the rules, the packet will be routed to the specified policy, otherwise the rule is skipped.
+RULE-SET rules are used to route packets based on the result of a [rule provider](/premium/rule-providers). When ClashTTT encounters this rule, it loads the rules from the specified rule provider and then matches the packet against the rules. If the packet matches any of the rules, the packet will be routed to the specified policy, otherwise the rule is skipped.
 
 ::: warning
-When encountering RULE-SET, ClashTT will resolve the domain name to an IP address **when the ruleset is of type IPCIDR**. If you want to skip the DNS resolution, use `no-resolve` option for the RULE-SET entry.
+When encountering RULE-SET, ClashTTT will resolve the domain name to an IP address **when the ruleset is of type IPCIDR**. If you want to skip the DNS resolution, use `no-resolve` option for the RULE-SET entry.
 :::
 
 `RULE-SET,my-rule-provider,DIRECT` loads all rules from `my-rule-provider` and sends the matched packets to the `DIRECT` outbound.
@@ -146,10 +146,10 @@ When encountering RULE-SET, ClashTT will resolve the domain name to an IP addres
 This feature is only available in the [Premium](/premium/introduction) edtion.
 :::
 
-SCRIPT rules are special rules that are used to route packets based on the result of a [script shortcut](/premium/script-shortcuts). When ClashTT encounters this rule, it evaluates the expression. If it returns `true`, the packet will be routed to the specified policy, otherwise the rule is skipped.
+SCRIPT rules are special rules that are used to route packets based on the result of a [script shortcut](/premium/script-shortcuts). When ClashTTT encounters this rule, it evaluates the expression. If it returns `true`, the packet will be routed to the specified policy, otherwise the rule is skipped.
 
 ::: warning
-When encountering this rule, ClashTT will resolve the domain name to an IP address. If you want to skip the DNS resolution, use `no-resolve` option.
+When encountering this rule, ClashTTT will resolve the domain name to an IP address. If you want to skip the DNS resolution, use `no-resolve` option.
 :::
 
 `SCRIPT,SHORTCUT-NAME,policy` routes any packets to `policy` if they have the shortcut evaluated `true`.
