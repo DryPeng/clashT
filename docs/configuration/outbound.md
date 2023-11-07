@@ -5,7 +5,7 @@ sidebarOrder: 4
 
 # Outbound
 
-There are several types of outbound targets in Clash. Each type has its own features and usage scenarios. In this page, we'll cover the common features of each type and how they should be used and configured.
+There are several types of outbound targets in ClashT. Each type has its own features and usage scenarios. In this page, we'll cover the common features of each type and how they should be used and configured.
 
 [[toc]]
 
@@ -15,7 +15,7 @@ Proxies are some outbound targets that you can configure. Like proxy servers, yo
 
 ### Shadowsocks
 
-Clash supports the following ciphers (encryption methods) for Shadowsocks:
+ClashT supports the following ciphers (encryption methods) for Shadowsocks:
 
 | Family | Ciphers |
 | ------ | ------- |
@@ -23,7 +23,7 @@ Clash supports the following ciphers (encryption methods) for Shadowsocks:
 | Stream | aes-128-cfb, aes-192-cfb, aes-256-cfb, rc4-md5, chacha20-ietf, xchacha20 |
 | Block | aes-128-ctr, aes-192-ctr, aes-256-ctr |
 
-In addition, Clash also supports popular Shadowsocks plugins `obfs` and `v2ray-plugin`.
+In addition, ClashT also supports popular Shadowsocks plugins `obfs` and `v2ray-plugin`.
 
 ::: code-group
 
@@ -79,7 +79,7 @@ In addition, Clash also supports popular Shadowsocks plugins `obfs` and `v2ray-p
 
 ### ShadowsocksR
 
-Clash supports the infamous anti-censorship protocol ShadowsocksR as well. The supported ciphers:
+ClashT supports the infamous anti-censorship protocol ShadowsocksR as well. The supported ciphers:
 
 | Family | Ciphers |
 | ------ | ------- |
@@ -121,7 +121,7 @@ Supported protocols:
 
 ### Vmess
 
-Clash supports the following ciphers (encryption methods) for Vmess:
+ClashT supports the following ciphers (encryption methods) for Vmess:
 
 - auto
 - aes-128-gcm
@@ -216,7 +216,7 @@ Clash supports the following ciphers (encryption methods) for Vmess:
 
 ### SOCKS5
 
-In addition, Clash supports SOCKS5 outbound as well:
+In addition, ClashT supports SOCKS5 outbound as well:
 
 ```yaml
 - name: "socks"
@@ -234,7 +234,7 @@ In addition, Clash supports SOCKS5 outbound as well:
 
 ### HTTP
 
-Clash also supports HTTP outbound:
+ClashT also supports HTTP outbound:
 
 ::: code-group
 
@@ -267,10 +267,10 @@ Clash also supports HTTP outbound:
 
 ### Snell
 
-Being an alternative protocol for anti-censorship, Clash has integrated support for Snell as well.
+Being an alternative protocol for anti-censorship, ClashT has integrated support for Snell as well.
 
 ::: tip
-Clash does not support Snell v4. ([#2466](https://github.com/Dreamacro/clash/issues/2466))
+ClashT does not support Snell v4. ([#2466](https://github.com/Dreamacro/clash/issues/2466))
 :::
 
 ```yaml
@@ -290,7 +290,7 @@ Clash does not support Snell v4. ([#2466](https://github.com/Dreamacro/clash/iss
 
 ### Trojan
 
-Clash has built support for the popular protocol Trojan:
+ClashT has built support for the popular protocol Trojan:
 
 ::: code-group
 
@@ -356,11 +356,11 @@ The request sent to this proxy group will be relayed through the specified proxy
 
 ### url-test
 
-Clash benchmarks each proxy servers in the list, by sending HTTP HEAD requests to a specified URL through these servers periodically. It's possible to set a maximum tolerance value, benchmarking interval, and the target URL.
+ClashT benchmarks each proxy servers in the list, by sending HTTP HEAD requests to a specified URL through these servers periodically. It's possible to set a maximum tolerance value, benchmarking interval, and the target URL.
 
 ### fallback
 
-Clash periodically tests the availability of servers in the list with the same mechanism of `url-test`. The first available server will be used.
+ClashT periodically tests the availability of servers in the list with the same mechanism of `url-test`. The first available server will be used.
 
 ### load-balance
 
@@ -368,7 +368,7 @@ The request to the same eTLD+1 will be dialed with the same proxy.
 
 ### select
 
-The first server is by default used when Clash starts up. Users can choose the server to use with the RESTful API. In this mode, you can hardcode servers in the config or use [Proxy Providers](#proxy-providers).
+The first server is by default used when ClashT starts up. Users can choose the server to use with the RESTful API. In this mode, you can hardcode servers in the config or use [Proxy Providers](#proxy-providers).
 
 Either way, sometimes you might as well just route packets with a direct connection. In this case, you can use the `DIRECT` outbound.
 
@@ -385,8 +385,8 @@ To use a different network interface, you will need to use a Proxy Group that co
 
 Proxy Providers give users the power to load proxy server lists dynamically, instead of hardcoding them in the configuration file. There are currently two sources for a proxy provider to load server list from:
 
-- `http`: Clash loads the server list from a specified URL on startup. Clash periodically pulls the server list from remote if the `interval` option is set.
-- `file`: Clash loads the server list from a specified location on the filesystem on startup.
+- `http`: ClashT loads the server list from a specified URL on startup. ClashT periodically pulls the server list from remote if the `interval` option is set.
+- `file`: ClashT loads the server list from a specified location on the filesystem on startup.
 
 Health check is available for both modes, and works exactly like `fallback` in Proxy Groups. The configuration format for the server list files is also exactly the same in the main configuration file:
 

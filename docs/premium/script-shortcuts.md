@@ -5,7 +5,7 @@ sidebarOrder: 6
 
 # Script Shortcuts
 
-Clash Premium implements the Scripting feature powered by Python3, enableing users to programmatically select policies for the packets with dynamic flexibility.
+ClashT Premium implements the Scripting feature powered by Python3, enableing users to programmatically select policies for the packets with dynamic flexibility.
 
 You can either controll the entire rule-matching engine with a single Python script, or define a number of shortcuts and use them in companion with the regular rules. This page refers to the latter feature. For the former, see [Script](./script.md).
 

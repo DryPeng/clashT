@@ -1,11 +1,11 @@
 ---
-sidebarTitle: Integrating Clash in Golang Programs
+sidebarTitle: Integrating ClashT in Golang Programs
 sidebarOrder: 3
 ---
 
-# Integrating Clash in Golang Programs
+# Integrating ClashT in Golang Programs
 
-If clash does not fit your own usage, you can use Clash in your own Golang code.
+If clash does not fit your own usage, you can use ClashT in your own Golang code.
 
 There is already basic support:
 
@@ -18,9 +18,10 @@ import (
 	"io"
 	"net"
 
-	"github.com/Dreamacro/clash/adapter/outbound"
-	"github.com/Dreamacro/clash/constant"
-	"github.com/Dreamacro/clash/listener/socks"
+"github.com/DryPeng/clashT/adapter/outbound"
+
+"github.com/DryPeng/clashT/constant"
+	"github.com/DryPeng/clashT/listener/socks"
 )
 
 func main() {

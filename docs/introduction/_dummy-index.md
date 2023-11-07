@@ -1,5 +1,5 @@
 ---
-sidebarTitle: What is Clash?
+sidebarTitle: What is ClashT?
 sidebarOrder: 1
 ---
 

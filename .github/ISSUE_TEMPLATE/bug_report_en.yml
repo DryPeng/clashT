@@ -1,40 +1,24 @@
-name: (English) Report a bug of the Clash core
+name: Report a bug of the ClashT core
 description: Create a bug report to help us improve
 labels:
   - bug
-title: "[Bug] <issue title>"
+title: "<issue title>"
 body:
   - type: markdown
     attributes:
-      value: "## Welcome to the official Clash open-source community"
-
-  - type: markdown
-    attributes:
       value: |
-        Thank you for taking the time to report an issue with the Clash core.  
+        ### Thank you for taking the time to report an issue with the ClashT core.  
         
-        Prior to submitting this issue, please read and follow the guidelines below to ensure that your issue can be resolved as quickly as possible. Options marked with an asterisk (*) are required, while others are optional. If the information you provide does not comply with the requirements, the maintainers may not respond and may directly close the issue.  
+        Prior to submitting this issue, please read and follow the guidelines below to ensure that your issue can be resolved as quickly as possible. Options marked with an asterisk (*) are required, while others are optional. If the information you provide does not comply with the requirements, we may not respond or close the issue 
+        directly.  
         
-        If you can debug and fix the issue yourself, we welcome you to submit a pull request to merge your changes upstream.
+        <small>If you can debug and fix the issue yourself, we welcome you to submit a pull request to merge your changes.</small>
 
-  - type: checkboxes
-    id: ensure
-    attributes:
-      label: Prerequisites
-      description: "If any of the following options do not apply, please do not submit this issue as we will close it"
-      options:
-        - label: "I understand that this is the official open-source version of the Clash core, **only providing support for the open-source version or Premium version**"
-          required: true
-        - label: "I am submitting an issue with the Clash core, not Clash.Meta / OpenClash / ClashX / Clash For Windows or any other derivative version"
-          required: true
-        - label: "I am using the latest version of the Clash or Clash Premium core **in this repository**"
-          required: true
-        - label: "I have searched at the [Issue Tracker](……/) **and have not found any related issues**"
-          required: true
-        - label: "I have read the [official Wiki](https://dreamacro.github.io/clash/) **and was unable to solve the issue**"
-          required: true
-        - label: "(required for Premium core) I've tried the `dev` branch and the issue still exists"
-          required: false
+        ### Prerequisites
+        1. I understand that this is the official open-source version of the ClashT core, only providing support for the Open-source version or Premium version.
+        2. I am submitting an issue with the ClashT core, not Clash.Meta / OpenClash / ClashX / Clash For Windows or any other derivative version.
+        3. I have searched and have not found any similar issues.
+        4. I have read the [official Wiki](https://clasht.drypeng.io/) or discussed with people in [Discussions](https://github.com/DryPeng/clashT/discussions) confirmed this is a bug.
 
   - type: markdown
     attributes:
@@ -45,10 +29,13 @@ body:
         Please provide the following information to help us locate the issue.  
         The issue might be closed if there's not enough information provided.
 
-  - type: input
+  - type: dropdown
+    id: version
     attributes:
       label: Version
-      description: "Run `clash -v` or look at the bottom-left corner of the Clash Dashboard to find out"
+      description: "Run `ClashT -v` or look at the bottom-left corner of the ClashT Dashboard to find out"
+      options:
+        - v1.18.0
     validations:
       required: true
 
@@ -59,12 +46,12 @@ body:
       description: "Select all operating systems that apply to this issue"
       multiple: true
       options:
-        - Linux
-        - Windows
-        - macOS (darwin)
         - Android
+        - Linux
+        - macOS (darwin)
         - OpenBSD / FreeBSD
-
+        - Windows
+        
   - type: dropdown
     id: arch
     attributes:
@@ -75,26 +62,42 @@ body:
         - amd64
         - amd64-v3
         - arm64
-        - "386"
         - armv5
         - armv6
         - armv7
-        - mips-softfloat
+        - i386
         - mips-hardfloat
-        - mipsle-softfloat
+        - mips-softfloat
         - mipsle-hardfloat
+        - mipsle-softfloat
         - mips64
         - mips64le
         - riscv64
 
   - type: markdown
     attributes:
-      value: "## Clash related information"
+      value: "## ClashT related information"
   - type: markdown
     attributes:
       value: |
-        Please provide relevant information about your Clash instance here. If you
-        do not provide enough information, the issue may be closed.
+        Please provide relevant information about your ClashT instance here. 
+        If you do not provide enough information, the issue may be closed.
+
+  - type: checkboxes
+    id: pcore
+    attributes:
+      label: Are you using Premium core?
+      description: "If bug does not appear on Premium core, please ignore this."
+      options:
+        - label: "Yes, I am"
+
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Do you want submit a pull request to merge?
+      description: "No need to worry about new bugs appearing, we review every request. (please try to write code that is as easy to read as ours)"
+      options:
+        - label: "Yes, I do"
 
   - type: textarea
     attributes:
@@ -121,4 +124,3 @@ body:
     attributes:
       label: Reproduction Steps
       placeholder: "Please provide the specific steps to reproduce the issue here (supports Markdown syntax)."
-

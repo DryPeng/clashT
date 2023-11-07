@@ -3,14 +3,14 @@ import locales from './locales'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'Clash',
+  title: 'ClashT',
 
-  base: '/clash/',
+  base: '/',
 
   head: [
     [
       'link',
-      { rel: 'icon', type: "image/x-icon", href: '/clash/logo.png' }
+      { rel: 'icon', type: "image/x-icon", href: '/logo.ico' }
     ],
   ],
 

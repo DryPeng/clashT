@@ -1,39 +1,29 @@
-name: (English) Feature request
+name: Feature request
 description: Suggest an idea for this project
 labels:
   - enhancement
-title: "[Feature] <title>"
+title: "<title>"
 body:
   - type: markdown
     attributes:
-      value: "## Welcome to the official Clash open-source community"
-
-  - type: markdown
-    attributes:
       value: |
-        Thank you for taking the time to make a suggestion to the Clash core.  
+        ### Thank you for taking the time to report an issue with the ClashT core.  
         
-        Prior to submitting this issue, please read and follow the guidelines below to ensure that your issue can be resolved as quickly as possible. Options marked with an asterisk (*) are required, while others are optional. If the information you provide does not comply with the requirements, the maintainers may not respond and may directly close the issue.  
+        Prior to submitting this issue, please read and follow the guidelines below to ensure that your issue can be resolved as quickly as possible. Options marked with an asterisk (*) are required, while others are optional. If the information you provide does not comply with the requirements, we may not respond or close the issue 
+        directly.  
         
-        If you can implement your idea by yourself, we welcome you to submit a pull request to merge your changes upstream.
+        <small>If you can debug and fix the issue yourself, we welcome you to submit a pull request to merge your changes.</small>
 
-  - type: checkboxes
-    id: ensure
-    attributes:
-      label: Prerequisites
-      description: "If any of the following options do not apply, please do not submit this issue as we will close it"
-      options:
-        - label: "I understand that this is the official open-source version of the Clash core, **only providing support for the open-source version or Premium version**"
-          required: true
-        - label: "I have looked for my idea in [the issue tracker](https://github.com/Dreamacro/clash/issues?q=is%3Aissue+label%3Aenhancement), **and found none of which being related**"
-          required: true
-        - label: "I have read the [official Wiki](https://dreamacro.github.io/clash/)"
-          required: true
+        ### Prerequisites
+        1. I understand that this is the official open-source version of the ClashT core, only providing support for the Open-source version or Premium version.
+        2. I am submitting an feature request with the ClashT core, not Clash.Meta / OpenClash / ClashX / Clash For Windows or any other derivative version.
+        3. I have searched and have not found any similar [issues](https://github.com/DryPeng/clashT/issues?q=is%3Aissue+label%3Aenhancement).
+        4. I have read the [official Wiki](https://clasht.drypeng.io/).
 
   - type: textarea
     attributes:
       label: Description
-      placeholder: "Please explain your suggestions in detail and in a clear manner. For instance, how does this issue impact you? What specific functionality are you hoping to achieve? Also, let us know what Clash Core is currently doing in terms of your suggestion, and what you would like it to do instead."
+      placeholder: "Please explain your suggestions in detail and clearly. For example, "what features would you like" or "how good is this feature"."
     validations:
       required: true
 

@@ -36,13 +36,13 @@ socks-port: 7891
 # "[aaaa::a8aa:ff:fe09:57d8]": bind a single IPv6 address
 # bind-address: '*'
 
-# Clash router working mode
+# ClashT router working mode
 # rule: rule-based packet routing
 # global: all packets will be forwarded to a single endpoint
 # direct: directly forward the packets to the Internet
 mode: rule
 
-# Clash by default prints logs to STDOUT
+# ClashT by default prints logs to STDOUT
 # info / warning / error / debug / silent
 # log-level: info
 
@@ -53,7 +53,7 @@ mode: rule
 external-controller: 127.0.0.1:9090
 
 # A relative path to the configuration directory or an absolute path to a
-# directory in which you put some static web resource. Clash core will then
+# directory in which you put some static web resource. ClashT core will then
 # serve it at `http://{{external-controller}}/ui`.
 # external-ui: folder
 
@@ -115,7 +115,7 @@ dns:
 
   # Supports UDP, TCP, DoT, DoH. You can specify the port to connect to.
   # All DNS questions are sent directly to the nameserver, without proxies
-  # involved. Clash answers the DNS question with the first result gathered.
+  # involved. ClashT answers the DNS question with the first result gathered.
   nameserver:
     - 114.114.114.114 # default value
     - 8.8.8.8 # default value
