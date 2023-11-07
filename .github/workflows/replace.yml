@@ -8,7 +8,14 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          find: "Clash"
+          find: "ClashTTT"
+          replace: "ClashTT"
+          include: "docs/*.md"
+          regex: false
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "ClashTT"
           replace: "ClashT"
           include: "docs/*.md"
           regex: false
