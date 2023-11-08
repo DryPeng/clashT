@@ -4,7 +4,7 @@ import (
 	"net"
 	"net/netip"
 
-	C "github.com/Dreamacro/clash/constant"
+	C "github.com/DryPeng/clashT/constant"
 	"github.com/Dreamacro/clash/context"
 	"github.com/Dreamacro/clash/transport/socks5"
 )
