@@ -8,16 +8,9 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          find: "ClashTTT"
-          replace: "ClashTT"
-          include: "docs/*.md"
-          regex: false
-      - name: Find and Replace
-        uses: jacobtomlinson/gha-find-replace@v3
-        with:
-          find: "ClashTT"
-          replace: "ClashT"
-          include: "docs/*.md"
+          find: "Dreamacro/clash"
+          replace: "DryPeng/clashT"
+          include: "*.go"
           regex: false
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4

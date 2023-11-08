@@ -5,8 +5,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/Dreamacro/clash/component/pool"
-	"github.com/Dreamacro/clash/transport/shadowsocks/shadowaead"
+	"github.com/DryPeng/clashT/component/pool"
+	"github.com/DryPeng/clashT/transport/shadowsocks/shadowaead"
 )
 
 type Pool struct {
