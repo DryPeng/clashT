@@ -7,12 +7,12 @@ import (
 	"strings"
 )
 
-const Name = "clash"
+const Name = "clashT"
 
 // Path is used to get the configuration path
 //
-// on Unix systems, `$HOME/.config/clash`.
-// on Windows, `%USERPROFILE%/.config/clash`.
+// on Unix systems, `$HOME/.config/clashT`.
+// on Windows, `%USERPROFILE%/.config/clashT`.
 var Path = func() *path {
 	homeDir, err := os.UserHomeDir()
 	if err != nil {
