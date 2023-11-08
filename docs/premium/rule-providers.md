@@ -34,16 +34,14 @@ There are three behavior types available:
 
 yaml:
 
-```yaml
+```yaml[ymal]
 payload:
   - '.blogger.com'
   - '*.*.microsoft.com'
   - 'books.itunes.apple.com'
 ```
 
-text:
-
-```txt
+```txt[txt]
 # comment
 .blogger.com
 *.*.microsoft.com
