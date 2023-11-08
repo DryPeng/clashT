@@ -24,7 +24,7 @@ body:
   - type: textarea
     attributes:
       label: Description
-      placeholder: Please explain your suggestions in detail and clearly. For example, "what features would you like" or "how good is this feature"."
+      placeholder: Please explain your suggestions in detail and clearly. For example, "What features would you like?" or "How good is this feature?".
     validations:
       required: true
   
