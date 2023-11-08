@@ -9,9 +9,9 @@ import (
 	"io"
 	"net"
 
-	"github.com/Dreamacro/clash/common/buf"
-	N "github.com/Dreamacro/clash/common/net"
-	"github.com/Dreamacro/clash/log"
+	"github.com/DryPeng/clashT/common/buf"
+	N "github.com/DryPeng/clashT/common/net"
+	"github.com/DryPeng/clashT/log"
 
 	"github.com/gofrs/uuid/v5"
 	utls "github.com/sagernet/utls"

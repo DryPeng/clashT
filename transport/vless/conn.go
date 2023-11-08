@@ -7,9 +7,9 @@ import (
 	"net"
 	"sync"
 
-	"github.com/Dreamacro/clash/common/buf"
-	N "github.com/Dreamacro/clash/common/net"
-	"github.com/Dreamacro/clash/transport/vless/vision"
+	"github.com/DryPeng/clashT/common/buf"
+	N "github.com/DryPeng/clashT/common/net"
+	"github.com/DryPeng/clashT/transport/vless/vision"
 
 	"github.com/gofrs/uuid/v5"
 	"google.golang.org/protobuf/proto"
