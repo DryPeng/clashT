@@ -21,8 +21,8 @@ body:
         4. I have read the [official Wiki](https://clasht.drypeng.io/).
 
   - type: textarea
-    attributes:
-      label: Description
+    attributes: 
+      label: Description the bug
       placeholder: "Please explain your suggestions in detail and clearly. For example, "what features would you like" or "how good is this feature"."
     validations:
       required: true
