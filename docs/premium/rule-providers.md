@@ -41,6 +41,8 @@ payload:
   - 'books.itunes.apple.com'
 ```
 
+txt:
+
 ```txt[txt]
 # comment
 .blogger.com
@@ -50,7 +52,7 @@ books.itunes.apple.com
 
 ## `ipcidr`
 
-yaml
+yaml:
 
 ```yaml
 payload:
