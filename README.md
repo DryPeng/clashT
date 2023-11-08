@@ -9,6 +9,9 @@
   <a href="https://github.com/DryPeng/clashT/actions">
     <img src="https://img.shields.io/github/actions/workflow/status/DryPeng/clashT/release.yml?branch=master&style=flat-square" alt="Github Actions">
   </a>
+  <a href="https://github.com/DryPeng/clashT/actions/workflows/github-code-scanning/codeql">
+    <img src="https://github.com/DryPeng/clashT/actions/workflows/github-code-scanning/codeql/badge.svg">
+  </a>
   <a href="https://goreportcard.com/report/github.com/DryPeng/clashT">
     <img src="https://goreportcard.com/badge/github.com/DryPeng/clashT?style=flat-square">
   </a>
@@ -19,7 +22,7 @@
   <!-- <a href="https://github.com/DryPeng/clashT/releases/tag/premium">
     <img src="https://img.shields.io/badge/release-Premium-00b4f0?style=flat-square">
   </a> -->
-</p>
+  
 
 > [!WARNING]  
 > This is not the [original *Clash*](https://github.com/Dreamacro/clash). This repositories is currently trying maintained. For convenience, *ClashT* is a new repositories.
