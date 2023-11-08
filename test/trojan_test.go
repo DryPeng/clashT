@@ -9,8 +9,8 @@ import (
 	"github.com/docker/docker/api/types/container"
 	"github.com/stretchr/testify/require"
 
-	"github.com/Dreamacro/clash/adapter/outbound"
-	C "github.com/Dreamacro/clash/constant"
+	"github.com/DryPeng/clashT/adapter/outbound"
+	C "github.com/DryPeng/clashT/constant"
 )
 
 func TestClash_Trojan(t *testing.T) {

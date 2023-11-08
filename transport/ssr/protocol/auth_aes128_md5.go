@@ -1,6 +1,6 @@
 package protocol
 
-import "github.com/Dreamacro/clash/transport/ssr/tools"
+import "github.com/DryPeng/clashT/transport/ssr/tools"
 
 func init() {
 	register("auth_aes128_md5", newAuthAES128MD5, 9)

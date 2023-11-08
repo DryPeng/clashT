@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	C "github.com/Dreamacro/clash/constant"
+	C "github.com/DryPeng/clashT/constant"
 
 	"github.com/samber/lo"
 	"github.com/stretchr/testify/assert"
