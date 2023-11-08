@@ -18,7 +18,12 @@ body:
         1. I understand that this is the official open-source version of the ClashT core, only providing support for the Open-source version or Premium version.
         2. I am submitting an feature request with the ClashT core, not Clash.Meta / OpenClash / ClashX / Clash For Windows or any other derivative version.
         3. I have searched and have not found any similar [issues](https://github.com/DryPeng/clashT/issues?q=is%3Aissue+label%3Aenhancement).
-        4. I have read the [official Wiki](https://clasht.drypeng.io/).
+        4. I have read the [official Wiki](https://clasht.drypeng.
+
+  - type: textarea
+    attributes:
+      label: Description
+      placeholder: "Please explain your suggestions in detail and clearly. For example, "what features would you like" or "how good is this feature"."
 
   - type: textarea
     attributes:
