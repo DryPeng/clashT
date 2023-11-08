@@ -69,8 +69,11 @@ You can find the latest documentation at https://clashT.drypeng.io/.
 
 #### Outside Developer
 
-[@Baidu0Big](https://github.com/Baidu0Big): Chinese (zh-CN and zh-TW) translation and code review
+[@Baidu0Big](https://github.com/Baidu0Big): Chinese (zh-CN and zh-TW) translation and code review.
 
+#### User
+
+[@The good guy doesn’t want to be named](https://github.com/404): Provide feedback and test.
 
 ## License
 
