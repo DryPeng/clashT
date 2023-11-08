@@ -23,12 +23,11 @@ body:
 
   - type: textarea
     attributes:
+      label: Description Possible Solution
+      placeholder: "Do you have any ideas on the implementation details?"
+  - type: textarea
+    attributes:
       label: Description
       placeholder: "Please explain your suggestions in detail and clearly. For example, "what features would you like" or "how good is this feature"."
     validations:
       required: true
-
-  - type: textarea
-    attributes:
-      label: Possible Solution
-      placeholder: "Do you have any ideas on the implementation details?"
