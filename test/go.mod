@@ -4,7 +4,7 @@ go 1.21
 
 require (
 	github.com/DryPeng/clashT v1.18.1
-	github.com/docker/docker v24.0.5+incompatible
+	github.com/docker/docker v24.0.7+incompatible
 	github.com/docker/go-connections v0.4.0
 	github.com/miekg/dns v1.1.55
 	github.com/stretchr/testify v1.8.4
