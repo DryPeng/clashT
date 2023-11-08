@@ -59,6 +59,7 @@ You can find the latest documentation at https://clashT.drypeng.io/.
 
 ## Credits
 
+- [https://github.com/Dreamacro/clash](https://github.com/Dreamacro/clash) (original *Clash*)
 - [riobard/go-shadowsocks2](https://github.com/riobard/go-shadowsocks2)
 - [v2ray/v2ray-core](https://github.com/v2ray/v2ray-core)
 - [WireGuard/wireguard-go](https://github.com/WireGuard/wireguard-go)
