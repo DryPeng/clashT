@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/binary"
 
-	"github.com/DryPeng/clashT/log"
+	"github.com/Dreamacro/clash/log"
 )
 
 var (
