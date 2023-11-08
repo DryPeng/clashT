@@ -19,20 +19,11 @@
   <a href="https://github.com/DryPeng/clashT/releases">
     <img src="https://img.shields.io/github/release/DryPeng/clashT/all.svg?style=flat-square">
   </a>
-  <!-- <a href="https://github.com/DryPeng/clashT/releases/tag/premium">
-    <img src="https://img.shields.io/badge/release-Premium-00b4f0?style=flat-square">
-  </a> -->
-  
 
-> [!WARNING]  
-> This is not the [original *Clash*](https://github.com/Dreamacro/clash). This repositories is currently trying maintained. For convenience, *ClashT* is a new repositories.
+  
 
 > [!NOTE]  
 > Do you want to contribute? Just [open a PR](https://github.com/DryPeng/clashT/pulls).
-
-> [!IMPORTANT]  
-> We are collecting [original *Clash*](https://github.com/Dreamacro/clash) issues and suggestions, [click here to submit](https://github.com/DryPeng/clashT/issues).
-
 
 ## Features
 
@@ -59,7 +50,7 @@ You can find the latest documentation at https://clashT.drypeng.io/.
 
 ## Credits
 
-- [Dreamacro/clash](https://github.com/Dreamacro/clash) (original *Clash*)
+- [Dreamacro/clash](https://github.com/Dreamacro/clash)
 - [riobard/go-shadowsocks2](https://github.com/riobard/go-shadowsocks2)
 - [v2ray/v2ray-core](https://github.com/v2ray/v2ray-core)
 - [WireGuard/wireguard-go](https://github.com/WireGuard/wireguard-go)
