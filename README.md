@@ -46,6 +46,7 @@ This is a general overview of the features that comes with *Clash*.
 
 *Some of the features may only be available in the [Premium core](https://github.com/DryPeng/clashT/blob/master/docs/premium/introduction.md)* (Awaiting maintenance).
 
+
 ## Documentation
 > [!Note]
 > We have temporarily ensured the readability of the document. Because the original repo ([Clash](https://github.com/Dreamacro/clash/)) cannot be viewed (404), some "issue" cannot be viewed.
@@ -55,11 +56,20 @@ This is a general overview of the features that comes with *Clash*.
 
 You can find the latest documentation at https://clashT.drypeng.io/.
 
+
 ## Credits
 
 - [riobard/go-shadowsocks2](https://github.com/riobard/go-shadowsocks2)
 - [v2ray/v2ray-core](https://github.com/v2ray/v2ray-core)
 - [WireGuard/wireguard-go](https://github.com/WireGuard/wireguard-go)
+
+
+## 	:heart_on_fire: Special thanks 	:heart_on_fire:
+
+#### Outside Developer
+
+[@Baidu0Big](https://github.com/Baidu0Big): Chinese (zh-CN and zh-TW) translation and code review
+
 
 ## License
 
