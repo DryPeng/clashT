@@ -5,9 +5,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Dreamacro/clash/component/dialer"
-	"github.com/Dreamacro/clash/component/proxydialer"
-	"github.com/Dreamacro/clash/log"
+	"github.com/DryPeng/clashT/component/dialer"
+	"github.com/DryPeng/clashT/component/proxydialer"
+	"github.com/DryPeng/clashT/log"
 
 	M "github.com/sagernet/sing/common/metadata"
 	"github.com/sagernet/sing/common/ntp"
