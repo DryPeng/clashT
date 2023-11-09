@@ -14,6 +14,13 @@ require (
 	github.com/mdlayher/netlink v1.7.2
 	github.com/miekg/dns v1.1.55
 	github.com/oschwald/geoip2-golang v1.9.0
+        github.com/sagernet/netlink v0.0.0-20220905062125-8043b4a9aa97
+	github.com/sagernet/sing v0.2.14
+	github.com/sagernet/sing-mux v0.1.3
+	github.com/sagernet/sing-shadowtls v0.1.4
+	github.com/sagernet/tfo-go v0.0.0-20230816093905-5a5c285d44a6
+	github.com/sagernet/utls v0.0.0-20230309024959-6732c2ab36f2
+	github.com/sagernet/wireguard-go v0.0.0-20230807125731-5d4a7ef2dc5f
 	github.com/samber/lo v1.38.1
 	github.com/sirupsen/logrus v1.9.3
 	github.com/stretchr/testify v1.8.4
