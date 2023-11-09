@@ -7,24 +7,14 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
-          
       - name: Setup Go
         uses: actions/setup-go@v4
         with:
           check-latest: true
           go-version: '1.21'
-          run: |
-            **/go.mod
-            go mod tidy
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with: 
-          commit_message: Auto-fix go.sum discrepancies
 
       - name: Check out code into the Go module directory
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Cache go module
         uses: actions/cache@v3
@@ -38,6 +28,7 @@ jobs:
 
       - name: Get dependencies, run test
         run: |
+          go mod tidy
           go test ./...
 
   build-test:
