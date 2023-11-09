@@ -12,8 +12,6 @@ jobs:
         with:
           check-latest: true
           go-version: '1.21'
-      - name: Install dependencies
-        run: cat go.sum
 
       - name: Check out code into the Go module directory
         uses: actions/checkout@v3
