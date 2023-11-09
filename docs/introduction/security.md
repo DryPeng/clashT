@@ -19,7 +19,7 @@ Here, we introduce a concept to distinguish danger levels.
 - Level 4: Can be ignored, there is no danger under most situations. (25% ~ 45%)
 - Level 5: Safe, there may be risks we haven’t discovered yet. (0%+)
 
-::: Note
+::: note
 To prevent disagreements
 "danger" refers (including but not limited) to ClashT crashing, User being attacked, and encryption fail. 
 :::
@@ -61,4 +61,4 @@ Not only for updates, we will also introduce experimental features in other core
 
 ## Report Security Vulnerability
 
-When submitting issues, you can select "[Report a security vulnerability](https://github.com/DryPeng/clashT/security/advisories/new)" to inform us of any vulnerabilities. We will review issue promptly. We also welcome your assistance after submitting a vulnerability. For effective communication, please use English.
+When submitting issues, you can select "[Report a security vulnerability](https://github.com/DryPeng/clashT/security/advisories/new)" to inform us of any vulnerabilities. We will review issue promptly. We also welcome your assistance after submitting a vulnerability (for effective communication, please use English).
