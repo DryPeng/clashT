@@ -61,4 +61,5 @@ jobs:
         run: |
           cd ./test
           go mod tidy
-          make -j $(go run ../test/main.go) all
+          cd ..
+          make -j $(go run ./test/main.go) all
