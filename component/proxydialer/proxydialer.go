@@ -8,12 +8,12 @@ import (
 	"net/netip"
 	"strings"
 
-	N "github.com/Dreamacro/clash/common/net"
-	"github.com/Dreamacro/clash/component/dialer"
-	"github.com/Dreamacro/clash/component/resolver"
-	C "github.com/Dreamacro/clash/constant"
-	"github.com/Dreamacro/clash/tunnel"
-	"github.com/Dreamacro/clash/tunnel/statistic"
+	N "github.com/DryPeng/clashT/common/net"
+	"github.com/DryPeng/clashT/component/dialer"
+	"github.com/DryPeng/clashT/component/resolver"
+	C "github.com/DryPeng/clashT/constant"
+	"github.com/DryPeng/clashT/tunnel"
+	"github.com/DryPeng/clashT/tunnel/statistic"
 )
 
 type proxyDialer struct {
