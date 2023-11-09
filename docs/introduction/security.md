@@ -61,4 +61,4 @@ Not only for updates, we will also introduce experimental features in other core
 
 ## Report Security Vulnerability
 
-When submitting issues, you can select "Report a security vulnerability" to inform us of any vulnerabilities. We will review issue promptly. We also welcome your assistance after submitting a vulnerability. For effective communication, please use English.
+When submitting issues, you can select "[Report a security vulnerability](https://github.com/DryPeng/clashT/security/advisories/new)" to inform us of any vulnerabilities. We will review issue promptly. We also welcome your assistance after submitting a vulnerability. For effective communication, please use English.
