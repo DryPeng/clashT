@@ -19,8 +19,7 @@ Here, we introduce a concept to distinguish danger levels.
 - Level 4: Can be ignored, there is no danger under most situations. (25% ~ 45%)
 - Level 5: Safe, there may be risks we haven’t discovered yet. (0%+)
 
-::: note
-To prevent disagreements
+::: tip To Prevent Disagreements
 "danger" refers (including but not limited) to ClashT crashing, User being attacked, and encryption fail. 
 :::
 
