@@ -5,18 +5,18 @@ import (
 	"testing"
 	"time"
 
-	"github.com/DryPeng/clashT/common/atomic"
 	"github.com/stretchr/testify/assert"
+	"go.uber.org/atomic"
 )
 
 func TestBasic(t *testing.T) {
-	single := NewSingle[int](time.Millisecond * 30)
+	single := NewSingle(time.Millisecond * 30)
 	foo := 0
 	shardCount := atomic.NewInt32(0)
-	call := func() (int, error) {
+	call := func() (any, error) {
 		foo++
 		time.Sleep(time.Millisecond * 5)
-		return 0, nil
+		return nil, nil
 	}
 
 	var wg sync.WaitGroup
@@ -26,7 +26,7 @@ func TestBasic(t *testing.T) {
 		go func() {
 			_, _, shard := single.Do(call)
 			if shard {
-				shardCount.Add(1)
+				shardCount.Inc()
 			}
 			wg.Done()
 		}()
@@ -38,32 +38,32 @@ func TestBasic(t *testing.T) {
 }
 
 func TestTimer(t *testing.T) {
-	single := NewSingle[int](time.Millisecond * 30)
+	single := NewSingle(time.Millisecond * 30)
 	foo := 0
-	callM := func() (int, error) {
+	call := func() (any, error) {
 		foo++
-		return 0, nil
+		return nil, nil
 	}
 
-	_, _, _ = single.Do(callM)
+	single.Do(call)
 	time.Sleep(10 * time.Millisecond)
-	_, _, shard := single.Do(callM)
+	_, _, shard := single.Do(call)
 
 	assert.Equal(t, 1, foo)
 	assert.True(t, shard)
 }
 
 func TestReset(t *testing.T) {
-	single := NewSingle[int](time.Millisecond * 30)
+	single := NewSingle(time.Millisecond * 30)
 	foo := 0
-	callM := func() (int, error) {
+	call := func() (any, error) {
 		foo++
-		return 0, nil
+		return nil, nil
 	}
 
-	_, _, _ = single.Do(callM)
+	single.Do(call)
 	single.Reset()
-	_, _, _ = single.Do(callM)
+	single.Do(call)
 
 	assert.Equal(t, 2, foo)
 }
