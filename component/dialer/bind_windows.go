@@ -1,15 +1,15 @@
 package dialer
 
 import (
-	"context"
 	"encoding/binary"
-	"fmt"
 	"net"
-	"net/netip"
+	"strings"
 	"syscall"
 	"unsafe"
 
 	"github.com/DryPeng/clashT/component/iface"
+
+	"golang.org/x/sys/windows"
 )
 
 const (
@@ -17,54 +17,38 @@ const (
 	IPV6_UNICAST_IF = 31
 )
 
-func bind4(handle syscall.Handle, ifaceIdx int) error {
-	var bytes [4]byte
-	binary.BigEndian.PutUint32(bytes[:], uint32(ifaceIdx))
-	idx := *(*uint32)(unsafe.Pointer(&bytes[0]))
-	err := syscall.SetsockoptInt(handle, syscall.IPPROTO_IP, IP_UNICAST_IF, int(idx))
-	if err != nil {
-		err = fmt.Errorf("bind4: %w", err)
-	}
-	return err
-}
+type controlFn = func(network, address string, c syscall.RawConn) error
 
-func bind6(handle syscall.Handle, ifaceIdx int) error {
-	err := syscall.SetsockoptInt(handle, syscall.IPPROTO_IPV6, IPV6_UNICAST_IF, ifaceIdx)
-	if err != nil {
-		err = fmt.Errorf("bind6: %w", err)
-	}
-	return err
-}
+func bindControl(ifaceIdx int, chain controlFn) controlFn {
+	return func(network, address string, c syscall.RawConn) (err error) {
+		defer func() {
+			if err == nil && chain != nil {
+				err = chain(network, address, c)
+			}
+		}()
 
-func bindControl(ifaceIdx int) controlFn {
-	return func(ctx context.Context, network, address string, c syscall.RawConn) (err error) {
-		addrPort, err := netip.ParseAddrPort(address)
-		if err == nil && !addrPort.Addr().IsGlobalUnicast() {
-			return
+		ipStr, _, err := net.SplitHostPort(address)
+		if err == nil {
+			ip := net.ParseIP(ipStr)
+			if ip != nil && !ip.IsGlobalUnicast() {
+				return
+			}
 		}
 
 		var innerErr error
 		err = c.Control(func(fd uintptr) {
-			handle := syscall.Handle(fd)
-			bind6err := bind6(handle, ifaceIdx)
-			bind4err := bind4(handle, ifaceIdx)
+			if ipStr == "" && strings.HasPrefix(network, "udp") {
+				// When listening udp ":0", we should bind socket to interface4 and interface6 at the same time
+				// and ignore the error of bind6
+				_ = bindSocketToInterface6(windows.Handle(fd), ifaceIdx)
+				innerErr = bindSocketToInterface4(windows.Handle(fd), ifaceIdx)
+				return
+			}
 			switch network {
-			case "ip6", "tcp6":
-				innerErr = bind6err
-			case "ip4", "tcp4", "udp4":
-				innerErr = bind4err
-			case "udp6":
-				// golang will set network to udp6 when listenUDP on wildcard ip (eg: ":0", "")
-				if (!addrPort.Addr().IsValid() || addrPort.Addr().IsUnspecified()) && bind6err != nil {
-					// try bind ipv6, if failed, ignore. it's a workaround for windows disable interface ipv6
-					if bind4err != nil {
-						innerErr = fmt.Errorf("%w (%s)", bind6err, bind4err)
-					} else {
-						innerErr = nil
-					}
-				} else {
-					innerErr = bind6err
-				}
+			case "tcp4", "udp4":
+				innerErr = bindSocketToInterface4(windows.Handle(fd), ifaceIdx)
+			case "tcp6", "udp6":
+				innerErr = bindSocketToInterface6(windows.Handle(fd), ifaceIdx)
 			}
 		})
 
@@ -76,13 +60,30 @@ func bindControl(ifaceIdx int) controlFn {
 	}
 }
 
-func bindIfaceToDialer(ifaceName string, dialer *net.Dialer, _ string, _ netip.Addr) error {
+func bindSocketToInterface4(handle windows.Handle, ifaceIdx int) error {
+	// MSDN says for IPv4 this needs to be in net byte order, so that it's like an IP address with leading zeros.
+	// Ref: https://learn.microsoft.com/en-us/windows/win32/winsock/ipproto-ip-socket-options
+	var bytes [4]byte
+	binary.BigEndian.PutUint32(bytes[:], uint32(ifaceIdx))
+	index := *(*uint32)(unsafe.Pointer(&bytes[0]))
+	err := windows.SetsockoptInt(handle, windows.IPPROTO_IP, IP_UNICAST_IF, int(index))
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func bindSocketToInterface6(handle windows.Handle, ifaceIdx int) error {
+	return windows.SetsockoptInt(handle, windows.IPPROTO_IPV6, IPV6_UNICAST_IF, ifaceIdx)
+}
+
+func bindIfaceToDialer(ifaceName string, dialer *net.Dialer, _ string, _ net.IP) error {
 	ifaceObj, err := iface.ResolveInterface(ifaceName)
 	if err != nil {
 		return err
 	}
 
-	addControlToDialer(dialer, bindControl(ifaceObj.Index))
+	dialer.Control = bindControl(ifaceObj.Index, dialer.Control)
 	return nil
 }
 
@@ -92,10 +93,6 @@ func bindIfaceToListenConfig(ifaceName string, lc *net.ListenConfig, _, address 
 		return "", err
 	}
 
-	addControlToListenConfig(lc, bindControl(ifaceObj.Index))
+	lc.Control = bindControl(ifaceObj.Index, lc.Control)
 	return address, nil
-}
-
-func ParseNetwork(network string, addr netip.Addr) string {
-	return network
 }
