@@ -56,6 +56,9 @@ jobs:
 
       - name: Build
         env:
-          NAME: clash
+          NAME: clashT
           BINDIR: bin
-        run: make -j $(go run ./test/main.go) all
+        run: |
+          cd ./test
+          go mod tidy
+          make -j $(go run ./test/main.go) all
