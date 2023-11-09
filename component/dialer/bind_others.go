@@ -4,12 +4,10 @@ package dialer
 
 import (
 	"net"
-	"net/netip"
 	"strconv"
-	"strings"
 )
 
-func bindIfaceToDialer(ifaceName string, dialer *net.Dialer, network string, destination netip.Addr) error {
+func bindIfaceToDialer(ifaceName string, dialer *net.Dialer, network string, destination net.IP) error {
 	if !destination.IsGlobalUnicast() {
 		return nil
 	}
@@ -22,7 +20,7 @@ func bindIfaceToDialer(ifaceName string, dialer *net.Dialer, network string, des
 		}
 	}
 
-	addr, err := LookupLocalAddrFromIfaceName(ifaceName, network, destination, int(local))
+	addr, err := lookupLocalAddr(ifaceName, network, destination, int(local))
 	if err != nil {
 		return err
 	}
@@ -40,20 +38,10 @@ func bindIfaceToListenConfig(ifaceName string, _ *net.ListenConfig, network, add
 
 	local, _ := strconv.ParseUint(port, 10, 16)
 
-	addr, err := LookupLocalAddrFromIfaceName(ifaceName, network, netip.Addr{}, int(local))
+	addr, err := lookupLocalAddr(ifaceName, network, nil, int(local))
 	if err != nil {
 		return "", err
 	}
 
 	return addr.String(), nil
-}
-
-func ParseNetwork(network string, addr netip.Addr) string {
-	// fix bindIfaceToListenConfig() force bind to an ipv4 address
-	if !strings.HasSuffix(network, "4") &&
-		!strings.HasSuffix(network, "6") &&
-		addr.Unmap().Is6() {
-		network += "6"
-	}
-	return network
 }
