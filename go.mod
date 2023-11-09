@@ -9,7 +9,7 @@ require (
 	github.com/go-chi/cors v1.2.1
 	github.com/go-chi/render v1.0.3
 	github.com/gofrs/uuid/v5 v5.0.0
-	github.com/gorilla/websocket v1.5.0
+	github.com/gorilla/websocket v1.5.1
 	github.com/insomniacslk/dhcp v0.0.0-20230816195147-b3ca2534940d
 	github.com/mdlayher/netlink v1.7.2
 	github.com/miekg/dns v1.1.55
