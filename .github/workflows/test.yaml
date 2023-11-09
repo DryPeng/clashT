@@ -13,9 +13,13 @@ jobs:
           check-latest: true
           go-version: '1.21'
       - name: Optic
-        run: |
-          cd ./
-          go mod tidy
+        uses: evantorrie/mott-the-tidier@v1-beta
+        with:
+          gomods: |
+            **/go.mod
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with: 
+          commit_message: Auto-fix go.sum discrepancies
 
       - name: Check out code into the Go module directory
         uses: actions/checkout@v3
