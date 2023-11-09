@@ -7,7 +7,7 @@ import (
 	"net/netip"
 	"sync"
 
-	"github.com/Dreamacro/clash/log"
+	"github.com/DryPeng/clashT/log"
 )
 
 var printMarkWarnOnce sync.Once

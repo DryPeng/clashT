@@ -4,8 +4,8 @@ import (
 	"context"
 	"net"
 
-	"github.com/Dreamacro/clash/common/atomic"
-	"github.com/Dreamacro/clash/component/resolver"
+	"github.com/DryPeng/clashT/common/atomic"
+	"github.com/DryPeng/clashT/component/resolver"
 )
 
 var (
