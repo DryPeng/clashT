@@ -1,6 +1,6 @@
 ---
 sidebarTitle: Frequently Asked Questions
-sidebarOrder: 4
+sidebarOrder: 5
 ---
 
 # Frequently Asked Questions
