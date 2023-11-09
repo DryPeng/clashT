@@ -2,8 +2,7 @@
 sidebarTitle: Security
 sidebarOrder: 4
 ---
-
-## About
+# Security
 
 ClashT is a network management tool, so security is important to ClashT.
 
@@ -20,13 +19,14 @@ Here, we introduce a concept to distinguish danger levels.
 - Level 4: Can be ignored, there is no danger under most situations. (25% ~ 45%)
 - Level 5: Safe, there may be risks we haven’t discovered yet. (0%+)
 
-::: To prevent disagreements
-"danger" refers (including but not limited) to ClashT crashing, User being attacked, and encryption fail. :::
+::: Note
+To prevent disagreements
+"danger" refers (including but not limited) to ClashT crashing, User being attacked, and encryption fail. 
+:::
 
 <sub><i>The percentages are our expected numbers and do not imply that we calculated them accurately.</i></sub>
 
-
-## Update Suggestions
+### Update Suggestions
 
 When we update, we will use some suggestions to make it understandable for Users who do not read this document.
 
@@ -52,6 +52,13 @@ We do not have any suggestions for this update. Please decide whether to proceed
 ```
 :::
 
+Found it? These suggestions all have levels specified.
+
+### Experimental Features
+
+Not only for updates, we will also introduce experimental features in other cores (ClashT being a normal core). These features may pose certain risks; therefore, their danger levels will be clearly stated in the documentation.
 
 
+## Report Security Vulnerability
 
+When submitting issues, you can select "Report a security vulnerability" to inform us of any vulnerabilities. We will review issue promptly. We also welcome your assistance after submitting a vulnerability. For effective communication, please use English.
