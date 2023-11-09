@@ -10,7 +10,7 @@ jobs:
         with:
           find: "Dreamacro/clash"
           replace: "DryPeng/clashT"
-          include: "component/dialer/*.go"
+          include: "common/atomic/*.go"
           regex: false
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
