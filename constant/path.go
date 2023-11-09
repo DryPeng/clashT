@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-const Name = "clash"
+const Name = "clashT"
 
 // Path is used to get the configuration path
 //
