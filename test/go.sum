@@ -2,8 +2,8 @@ github.com/Azure/go-ansiterm v0.0.0-20210617225240-d185dfc1b5a1 h1:UQHMgLO+TxOEl
 github.com/Azure/go-ansiterm v0.0.0-20210617225240-d185dfc1b5a1/go.mod h1:xomTg63KZ2rFqZQzSB4Vz2SUXa1BpHTVz9L5PTmPC4E=
 github.com/Dreamacro/protobytes v0.0.0-20230617041236-6500a9f4f158 h1:JFnwKplz9hj8ubqYjm8HkgZS1Rvz9yW+u/XCNNTxr0k=
 github.com/Dreamacro/protobytes v0.0.0-20230617041236-6500a9f4f158/go.mod h1:QvmEZ/h6KXszPOr2wUFl7Zn3hfFNYdfbXwPVDTyZs6k=
-github.com/DryPeng/clashT v1.18.1 h1:MPBc9A9BLNPXznGNhyLo5KD1OSB8HcuT62AYqeoKZ2o=
-github.com/DryPeng/clashT v1.18.1/go.mod h1:S9pCNYzXscrJKr+BG7CBgO7bZCG+EQ88kK3EKF5u5mE=
+github.com/DryPeng/clashT v1.19.0 h1:5BhyTZDTGU8wdBeqGugCSjv2+cOJD+h4S1imXP6feQc=
+github.com/DryPeng/clashT v1.19.0/go.mod h1:S9pCNYzXscrJKr+BG7CBgO7bZCG+EQ88kK3EKF5u5mE=
 github.com/Microsoft/go-winio v0.6.1 h1:9/kr64B9VUZrLm5YYwbGtUJnMgqWVOdUAXu6Migciow=
 github.com/Microsoft/go-winio v0.6.1/go.mod h1:LRdKpFKfdobln8UmuiYcKPot9D2v6svN5+sAH+4kjUM=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

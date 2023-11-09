@@ -3,7 +3,7 @@ module clash-test
 go 1.21
 
 require (
-	github.com/DryPeng/clashT v1.18.1
+	github.com/DryPeng/clashT v1.19.0
 	github.com/docker/docker v24.0.7+incompatible
 	github.com/docker/go-connections v0.4.0
 	github.com/miekg/dns v1.1.56
