@@ -9,8 +9,10 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    target-branch: "develop"
       
   - package-ecosystem: "gomod" # See documentation for possible values
     directory: "/test" # Location of package manifests
     schedule:
       interval: "weekly"
+    target-branch: "develop"
