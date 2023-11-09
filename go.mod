@@ -25,7 +25,7 @@ require (
 	github.com/sirupsen/logrus v1.9.3
 	github.com/stretchr/testify v1.8.4
 	github.com/vishvananda/netlink v1.2.1-beta.2.0.20230420174744-55c8b9515a01
-	go.etcd.io/bbolt v1.3.7
+	go.etcd.io/bbolt v1.3.8
 	go.uber.org/atomic v1.11.0
 	go.uber.org/automaxprocs v1.5.3
 	golang.org/x/crypto v0.14.0
