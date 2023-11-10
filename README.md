@@ -38,14 +38,14 @@ This is a general overview of the features that comes with *Clash*.
 - Remote Providers: load remote proxy lists dynamically.
 - RESTful API: update configuration in-place via a comprehensive API.
 
-*Some of the features may only be available in the ~~[Premium core](https://github.com/DryPeng/clashT/blob/master/docs/premium/introduction.md) (Awaiting maintenance)~~ -> [Baidu Core](https://github.com/DryPeng/BaiduC-Super/tree/main/docs/Baidu_Core).*
+*Some of the features may only be available in the ~~[Premium core](https://github.com/DryPeng/clashT/blob/master/docs/premium/introduction.md) (Awaiting maintenance)~~ -> [Baidu Core](https://github.com/DryPeng/BaiduC-Super/tree/main/docs/Baidu_Core) (Awaiting test).*
 
 
 ## Documentation
 > [!Note]
 > We have temporarily ensured the readability of the document. Because the original repo ([Clash](https://github.com/Dreamacro/clash/)) cannot be viewed (404), some "issue" cannot be viewed.
 
-~~You can find the latest documentation at https://clashT.drypeng.io/.~~ -> Please wait for us to rebuild. Now if you want view documents, please go to the [docs folder](https://github.com/DryPeng/clashT/tree/master/docs) to temporarily view the documentation.
+You can find the latest documentation at https://clashT.drypeng.io/ (New documentation coming soon).
 
 
 ## Credits
