@@ -38,7 +38,7 @@ This is a general overview of the features that comes with *Clash*.
 - Remote Providers: load remote proxy lists dynamically.
 - RESTful API: update configuration in-place via a comprehensive API.
 
-*Some of the features may only be available in the [Premium core](https://github.com/DryPeng/clashT/blob/master/docs/premium/introduction.md)* (Awaiting maintenance).
+*Some of the features may only be available in the ~~[Premium core](https://github.com/DryPeng/clashT/blob/master/docs/premium/introduction.md)* (Awaiting maintenance)~~ -> [Baidu Core](https://github.com/DryPeng/BaiduC-Super/tree/main/docs/Baidu_Core.
 
 
 ## Documentation
