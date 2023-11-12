@@ -13,11 +13,11 @@ We will put the Security of ClashT first, so at some update, some functions may 
 
 Here, we introduce a concept to distinguish danger levels.
 
-- Level 1: Superlative, there are dangerous in all situations. (90%+)
-- Level 2: Need to be vigilant, only in some cases there is **no** danger. (70%+)
-- Level 3: Be careful, there are some cases is danger. (45% ~ 70%)
-- Level 4: Can be ignored, there is no danger under most situations. (25% ~ 45%)
-- Level 5: Safe, there may be risks we haven’t discovered yet. (0%+)
+- Level 1: **Superlative**, there are dangerous in all situations. (90%+)
+- Level 2: **Need to be vigilant**, only in some cases there is **no** danger. (70%+)
+- Level 3: **Be careful**, there are some cases is danger. (45% ~ 70%)
+- Level 4: **Can be ignored**, there is no danger under most situations. (25% ~ 45%)
+- Level 5: **Safe**, there may be risks we haven’t discovered yet. (0%+)
 
 ::: tip To Prevent Disagreements
 "danger" refers (including but not limited) to ClashT crashing, User being attacked, and encryption fail. 
@@ -31,23 +31,23 @@ When we update, we will use some suggestions to make it understandable for Users
 
 ::: code-group
 ```txt [Level 1]
-This update is very important! We strongly suggestions for this update. (L1)
+This update is very important! We have strong suggestions for this update. (L1)
 ```
 
 ```txt [Level 2]
-We have some strongly suggestions for this update. (L2)
+We have some strong suggestions for this update. (L2)
 ```
 
 ```txt [Level 3]
-We have some suggestions for this update. Please decide whether to proceed with updating to v— according to your preferences. (L3)
+We have some minor suggestions for this update. Please proceed with updating to v— according to your preferences. (L3)
 ```
 
 ```txt [Level 4]
-We have some minor suggestions for this update. Please decide whether to proceed with updating to v— according to your preferences. (L4)
+We have some minor suggestions for this update. Please proceed with updating to v— according to your preferences. (L4)
 ```
 
 ```txt [Level 5]
-We do not have any suggestions for this update. Please decide whether to proceed with updating to v— according to your preferences. (L5)
+We do not have any specific suggestions for this update. Please proceed with updating to v— according to your preferences. (L5)
 ```
 :::
 
