@@ -48,6 +48,11 @@ This is a general overview of the features that comes with *Clash*.
 You can find the latest documentation at https://clashT.drypeng.io/ (New documentation coming soon).
 
 
+## Other
+
+We are trying to build iOS software and macOS software to temporarily slow down the update of ClashT.
+
+
 ## Credits
 
 - [Dreamacro/clash](https://github.com/Dreamacro/clash)
