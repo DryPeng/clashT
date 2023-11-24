@@ -23,7 +23,7 @@
   
 
 > [!NOTE]  
-> Do you want to contribute? Just [open a PR](https://github.com/DryPeng/clashT/pulls).
+> This bench has not modified any source code (except the name) and can be freely forked
 
 ## Features
 
