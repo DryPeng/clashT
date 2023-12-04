@@ -45,7 +45,7 @@ This is a general overview of the features that comes with *Clash*.
 > [!Note]
 > We have temporarily ensured the readability of the document. Because the original repo ([Clash](https://github.com/Dreamacro/clash/)) cannot be viewed (404), some "issue" cannot be viewed.
 
-You can find the old documentation at https://clashT.drypeng.io/ and latest at [New documentation](https://docs.drypeng.io/clash)
+You can find the old documentation at https://clashT.drypeng.io/ and latest at [New documentation](https://docs.drypeng.io/clash).
 
 
 ## Other
