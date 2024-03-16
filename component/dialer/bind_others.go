@@ -4,17 +4,44 @@ package dialer
 
 import (
 	"net"
-	"net/netip"
+	"strconv"
 )
 
-func bindIfaceToDialer(ifaceName string, dialer *net.Dialer, network string, destination netip.Addr) error {
-	return fallbackBindIfaceToDialer(ifaceName, dialer, network, destination)
+func bindIfaceToDialer(ifaceName string, dialer *net.Dialer, network string, destination net.IP) error {
+	if !destination.IsGlobalUnicast() {
+		return nil
+	}
+
+	local := uint64(0)
+	if dialer.LocalAddr != nil {
+		_, port, err := net.SplitHostPort(dialer.LocalAddr.String())
+		if err == nil {
+			local, _ = strconv.ParseUint(port, 10, 16)
+		}
+	}
+
+	addr, err := lookupLocalAddr(ifaceName, network, destination, int(local))
+	if err != nil {
+		return err
+	}
+
+	dialer.LocalAddr = addr
+
+	return nil
 }
 
-func bindIfaceToListenConfig(ifaceName string, lc *net.ListenConfig, network, address string) (string, error) {
-	return fallbackBindIfaceToListenConfig(ifaceName, lc, network, address)
-}
+func bindIfaceToListenConfig(ifaceName string, _ *net.ListenConfig, network, address string) (string, error) {
+	_, port, err := net.SplitHostPort(address)
+	if err != nil {
+		port = "0"
+	}
 
-func ParseNetwork(network string, addr netip.Addr) string {
-	return fallbackParseNetwork(network, addr)
+	local, _ := strconv.ParseUint(port, 10, 16)
+
+	addr, err := lookupLocalAddr(ifaceName, network, nil, int(local))
+	if err != nil {
+		return "", err
+	}
+
+	return addr.String(), nil
 }

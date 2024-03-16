@@ -9,7 +9,7 @@ It's recommended that you read the [Introduction](/configuration/introduction) b
 
 ## Configuration Files
 
-The main configuration file is called `config.yaml`. By default, ClashT reads the configuration files at `$HOME/.config/clash`. If it doesn't exist, ClashT will generate a minimal configuration file at that location.
+The main configuration file is called `config.yaml`. By default, ClashT reads the configuration files at `Linux: $HOME/.config/clash` or `Windows: %USERPROFILE%/.config/clash`. If it doesn't exist, ClashT will generate a minimal configuration file at that location.
 
 If you want to place your configurations elsewhere (e.g. `/etc/clash`), you can use command-line option `-d` to specify a configuration directory:
 

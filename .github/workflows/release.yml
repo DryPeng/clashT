@@ -27,7 +27,7 @@ jobs:
       - name: Build
         if: startsWith(github.ref, 'refs/tags/')
         env:
-          NAME: clash
+          NAME: clasht
           BINDIR: bin
         run: make -j $(go run ./test/main.go) releases
 

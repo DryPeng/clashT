@@ -38,14 +38,19 @@ This is a general overview of the features that comes with *Clash*.
 - Remote Providers: load remote proxy lists dynamically.
 - RESTful API: update configuration in-place via a comprehensive API.
 
-*Some of the features may only be available in the [Premium core](https://github.com/DryPeng/clashT/blob/master/docs/premium/introduction.md)* (Awaiting maintenance).
+*Some of the features may only be available in the [Premium core](https://github.com/DryPeng/clashT/blob/master/docs/premium/introduction.md) (Awaiting maintenance)*
 
 
 ## Documentation
 > [!Note]
 > We have temporarily ensured the readability of the document. Because the original repo ([Clash](https://github.com/Dreamacro/clash/)) cannot be viewed (404), some "issue" cannot be viewed.
 
-You can find the latest documentation at https://clashT.drypeng.io/.
+You can find the old documentation at https://clashT.drypeng.io/ and latest at [New documentation](https://docs.drypeng.io/clash).
+
+
+## Other
+
+We are trying to build iOS software and macOS software, now temporarily slow down the update of ClashT.
 
 
 ## Credits
@@ -56,7 +61,7 @@ You can find the latest documentation at https://clashT.drypeng.io/.
 - [WireGuard/wireguard-go](https://github.com/WireGuard/wireguard-go)
 
 
-## 	:heart_on_fire: Special thanks 	:heart_on_fire:
+## 	❤️‍🔥 Special thanks ❤️‍🔥
 
 #### Outside Developer
 
