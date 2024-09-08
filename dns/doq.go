@@ -6,17 +6,20 @@ import (
 	"fmt"
 	"math/rand"
 	"net"
+	"sync"
 
 	"github.com/DryPeng/clashT/component/dialer"
 	"github.com/DryPeng/clashT/component/resolver"
 
 	D "github.com/miekg/dns"
-	"github.com/lucas-clemente/quic-go"
+	quic "github.com/lucas-clemente/quic-go"
 )
 
 type doqClient struct {
 	url    string
 	config *quic.Config
+	conn   quic.Connection
+	mu     sync.Mutex
 }
 
 func (dc *doqClient) Exchange(m *D.Msg) (msg *D.Msg, err error) {
@@ -24,7 +27,6 @@ func (dc *doqClient) Exchange(m *D.Msg) (msg *D.Msg, err error) {
 }
 
 func (dc *doqClient) ExchangeContext(ctx context.Context, m *D.Msg) (msg *D.Msg, err error) {
-	// Set ID to 0 for better cache friendliness
 	newM := *m
 	newM.Id = 0
 
@@ -33,26 +35,27 @@ func (dc *doqClient) ExchangeContext(ctx context.Context, m *D.Msg) (msg *D.Msg,
 		return nil, err
 	}
 
-	conn, err := quic.DialAddrContext(ctx, dc.url, &tls.Config{NextProtos: []string{"doq"}}, dc.config)
+	conn, err := dc.getConnection(ctx)
 	if err != nil {
-		return nil, fmt.Errorf("failed to dial QUIC: %w", err)
+		return nil, fmt.Errorf("failed to get QUIC connection: %w", err)
 	}
-	defer conn.CloseWithError(0, "")
 
 	stream, err := conn.OpenStreamSync(ctx)
 	if err != nil {
+		dc.closeConnection()
 		return nil, fmt.Errorf("failed to open stream: %w", err)
 	}
 	defer stream.Close()
 
-	_, err = stream.Write(data)
-	if err != nil {
+	if _, err = stream.Write(data); err != nil {
+		dc.closeConnection()
 		return nil, fmt.Errorf("failed to write to stream: %w", err)
 	}
 
 	resp := make([]byte, 4096)
 	n, err := stream.Read(resp)
 	if err != nil {
+		dc.closeConnection()
 		return nil, fmt.Errorf("failed to read from stream: %w", err)
 	}
 
@@ -61,9 +64,35 @@ func (dc *doqClient) ExchangeContext(ctx context.Context, m *D.Msg) (msg *D.Msg,
 		return nil, fmt.Errorf("failed to unpack DNS response: %w", err)
 	}
 
-	// Restore original ID
 	msg.Id = m.Id
 	return msg, nil
+}
+
+func (dc *doqClient) getConnection(ctx context.Context) (quic.Connection, error) {
+	dc.mu.Lock()
+	defer dc.mu.Unlock()
+
+	if dc.conn != nil && !dc.conn.Context().Done() {
+		return dc.conn, nil
+	}
+
+	conn, err := quic.DialAddrContext(ctx, dc.url, &tls.Config{NextProtos: []string{"doq"}}, dc.config)
+	if err != nil {
+		return nil, err
+	}
+
+	dc.conn = conn
+	return conn, nil
+}
+
+func (dc *doqClient) closeConnection() {
+	dc.mu.Lock()
+	defer dc.mu.Unlock()
+
+	if dc.conn != nil {
+		dc.conn.CloseWithError(0, "")
+		dc.conn = nil
+	}
 }
 
 func newDoQClient(url, iface string, r *Resolver) *doqClient {
@@ -71,7 +100,7 @@ func newDoQClient(url, iface string, r *Resolver) *doqClient {
 		url: url,
 		config: &quic.Config{
 			DialAddr: func(ctx context.Context, addr string, tlsCfg *tls.Config, cfg *quic.Config) (quic.EarlyConnection, error) {
-				host, port, err := net.SplitHostPort(addr)
+				host, _, err := net.SplitHostPort(addr)
 				if err != nil {
 					return nil, err
 				}
@@ -84,7 +113,7 @@ func newDoQClient(url, iface string, r *Resolver) *doqClient {
 				}
 				ip := ips[rand.Intn(len(ips))]
 
-				options := []dialer.Option{}
+				var options []dialer.Option
 				if iface != "" {
 					options = append(options, dialer.WithInterface(iface))
 				}
