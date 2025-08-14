@@ -3,7 +3,7 @@ module github.com/DryPeng/clashT
 go 1.21
 
 require (
-	github.com/docker/docker v26.1.4+incompatible
+	github.com/docker/docker v28.0.0+incompatible
 	github.com/docker/go-connections v0.4.0
 	github.com/miekg/dns v1.1.55
 	github.com/stretchr/testify v1.9.0
